@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class RMCharactersSelectorViewController: UIViewController {
+final class RMCharactersSelectorViewController: RMBaseViewController {
     
     var coordinator: RMCharactersCoordinator?
     var viewModel: RMCharactersSelectorViewModel
@@ -64,6 +64,18 @@ final class RMCharactersSelectorViewController: UIViewController {
 extension RMCharactersSelectorViewController {
     
     func setupBinding() {
+        
+        viewModel.loadingStatus.bind { [weak self] status in
+            guard let self = self,
+                  let status = status else { return }
+            
+            switch status {
+            case .start:
+                self.showSpinner()
+            case .stop:
+                self.hideSpinner()
+            }
+        }
         
         viewModel.model.bind { [weak self] model in
             guard let _ = model,

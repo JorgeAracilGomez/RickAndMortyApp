@@ -59,11 +59,6 @@ extension RMCharacterCollectionViewCell {
     
     private func setupImageView() {
         addSubview(imageView)
-//        RMImageCacheMannager.shared.loadImage(forKey: model?.image ?? "", completion: { [weak self] imageData in
-//            guard let self = self, let imageData = imageData else { return }
-//            self.imageView.image = UIImage(data: imageData)
-////            self.showImageLoaded(UIImage(data: imageData))
-//        })
         setupImageViewConstraints()
     }
     

@@ -18,12 +18,14 @@ protocol RMCharactersSelectorViewModelInput {
 }
 
 protocol RMCharactersSelectorViewModelOutput {
+    var loadingStatus: Box<RMLoadingStatus?> { get }
     var model: Box<RMCharactersSelectorModel?> { get }
     var showEmptyStateModel: Box<Bool?> { get }
     var characterDetailModel: Box<RMCharacterEntity?> { get }
 }
 
 final class DefaultRMCharactersSelectorViewModel: RMCharactersSelectorViewModel {
+    var loadingStatus: Box<RMLoadingStatus?> = Box(nil)
     var model: Box<RMCharactersSelectorModel?> = Box(nil)
     var showEmptyStateModel: Box<Bool?> = Box(nil)
     var characterDetailModel: Box<RMCharacterEntity?> = Box(nil)
@@ -63,13 +65,15 @@ extension DefaultRMCharactersSelectorViewModel {
     
     func fetchData(withSearchFilter searchFilter: String?) {
         
-        // MISCO LOADING STATUS
+        loadingStatus.value = .start
         let useCaseParameters = RMCharactersUseCaseParameters(searchFilter: searchFilter)
         charactersUseCase.execute(params: useCaseParameters) { [weak self] result in
             switch result {
             case .success(let entity):
+                self?.loadingStatus.value = .stop
                 self?.createModel(for: entity)
             case .failure(let error):
+                self?.loadingStatus.value = .stop
                 self?.createEmptyStateModel(forError: error)
             }
         }

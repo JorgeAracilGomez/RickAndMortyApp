@@ -20,14 +20,14 @@ protocol RMCharactersSelectorViewModelInput {
 protocol RMCharactersSelectorViewModelOutput {
     var loadingStatus: Box<RMLoadingStatus?> { get }
     var model: Box<RMCharactersSelectorModel?> { get }
-    var showEmptyStateModel: Box<Bool?> { get }
+    var showEmptyStateError: Box<Bool?> { get }
     var characterDetailModel: Box<RMCharacterEntity?> { get }
 }
 
 final class DefaultRMCharactersSelectorViewModel: RMCharactersSelectorViewModel {
     var loadingStatus: Box<RMLoadingStatus?> = Box(nil)
     var model: Box<RMCharactersSelectorModel?> = Box(nil)
-    var showEmptyStateModel: Box<Bool?> = Box(nil)
+    var showEmptyStateError: Box<Bool?> = Box(nil)
     var characterDetailModel: Box<RMCharacterEntity?> = Box(nil)
     var charactersUseCase: RMCharactersUseCase
     
@@ -86,19 +86,20 @@ extension DefaultRMCharactersSelectorViewModel {
  
     func createModel(for entity: RMCharactersListEntity) {
         guard let newCharacters = entity.results else {
-            // MISCO ERROR
+            let error = RMError.unknownError(message: "Could not get list of characters in RMCharactersSelectorViewModel")
+            createEmptyStateModel(forError: error)
             return
         }
         
         let currentCharacters = model.value?.characters ?? []
         let isFetchDataFinished: Bool = entity.info?.next == nil
-        self.showEmptyStateModel.value = false
+        self.showEmptyStateError.value = false
         self.model.value = RMCharactersSelectorModel(characters: currentCharacters + newCharacters,
                                                      isFetchDataFinished: isFetchDataFinished)
     }
     
     func createEmptyStateModel(forError: RMError) {
         self.model.value = RMCharactersSelectorModel(characters: [], isFetchDataFinished: true)
-        self.showEmptyStateModel.value = true
+        self.showEmptyStateError.value = true
     }
 }

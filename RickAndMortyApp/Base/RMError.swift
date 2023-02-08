@@ -11,4 +11,5 @@ enum RMError: Error {
     case serviceError(message: String)
     case decodeError(forDecodable: String)
     case parseError(message: String)
+    case unknownError(message: String)
 }

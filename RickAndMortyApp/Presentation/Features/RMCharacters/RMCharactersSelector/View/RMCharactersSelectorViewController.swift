@@ -84,7 +84,7 @@ extension RMCharactersSelectorViewController {
             self.reloadView()
         }
         
-        viewModel.showEmptyStateModel.bind { [weak self] emptyState in
+        viewModel.showEmptyStateError.bind { [weak self] emptyState in
             guard let emptyState = emptyState,
                   let self = self else { return }
             

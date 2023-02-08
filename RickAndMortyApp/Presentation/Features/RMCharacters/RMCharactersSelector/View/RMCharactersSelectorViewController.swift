@@ -69,12 +69,7 @@ extension RMCharactersSelectorViewController {
             guard let self = self,
                   let status = status else { return }
             
-            switch status {
-            case .start:
-                self.showSpinner()
-            case .stop:
-                self.hideSpinner()
-            }
+            self.showLoader(status: status)
         }
         
         viewModel.model.bind { [weak self] model in
@@ -142,6 +137,15 @@ extension RMCharactersSelectorViewController {
     func reloadView() {
         DispatchQueue.main.async {
             self.charactersCollectionView.reloadData()
+        }
+    }
+    
+    func showLoader(status: RMLoadingStatus) {
+        switch status {
+        case .start:
+            self.showSpinner()
+        case .stop:
+            self.hideSpinner()
         }
     }
     

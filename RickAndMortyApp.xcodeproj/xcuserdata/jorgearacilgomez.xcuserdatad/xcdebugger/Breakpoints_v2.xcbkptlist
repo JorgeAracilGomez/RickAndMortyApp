@@ -30,8 +30,8 @@
             filePath = "RickAndMortyApp/Presentation/Features/RMCharacters/RMCharactersSelector/View/RMCharactersSelectorViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "149"
-            endingLineNumber = "149"
+            startingLineNumber = "153"
+            endingLineNumber = "153"
             landmarkName = "mannageEmptyStateView(for:)"
             landmarkType = "7">
             <Locations>

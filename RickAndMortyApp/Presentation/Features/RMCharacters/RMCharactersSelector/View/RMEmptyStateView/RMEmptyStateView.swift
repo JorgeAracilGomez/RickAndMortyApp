@@ -33,7 +33,7 @@ final class RMEmptyStateView: UIView {
         addSubview(message)
         message.numberOfLines = Constants.messageNumberOfLines
         message.textAlignment = .center
-        message.text = "Theres nothing here" // MISCO LOCALIZABLE
+        message.text = Localizables.searchBarEmptyStateMessage.localized
         message.font = Fonts.messageFont
         
         setupMessageLabelConstraints()

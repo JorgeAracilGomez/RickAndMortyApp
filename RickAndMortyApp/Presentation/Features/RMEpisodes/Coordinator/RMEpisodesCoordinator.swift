@@ -30,7 +30,7 @@ extension RMEpisodesCoordinator {
     func start() {
         let episodesSelectionViewController = RMEpisodesSelectorViewController()
         episodesSelectionViewController.coordinator = self
-        episodesSelectionViewController.title = "Episodes" // MISCO LOCALIZABLE
+        episodesSelectionViewController.title = "Episodes_Navigation_Title".localized
         navigationController.navigationBar.prefersLargeTitles = true
         navigationController.pushViewController(episodesSelectionViewController, animated: false)
     }

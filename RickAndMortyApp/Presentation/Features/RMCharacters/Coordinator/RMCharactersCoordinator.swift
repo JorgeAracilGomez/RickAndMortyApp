@@ -30,7 +30,7 @@ extension RMCharactersCoordinator {
     func start() {
         let characterSelectionViewController = RMCharactersSelectorViewController()
         characterSelectionViewController.coordinator = self
-        characterSelectionViewController.title = "Characters" // MISCO LOCALIZABLE
+        characterSelectionViewController.title = "Characters_Navigation_Title".localized
         navigationController.navigationBar.prefersLargeTitles = true
         navigationController.pushViewController(characterSelectionViewController, animated: false)
     }

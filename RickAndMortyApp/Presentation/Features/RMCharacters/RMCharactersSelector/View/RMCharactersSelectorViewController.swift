@@ -52,7 +52,6 @@ final class RMCharactersSelectorViewController: UIViewController {
         super.viewDidLoad()
         
         view.backgroundColor = .white
-//        title = "Characters" // MISCO LOCALZABLE
 
         setupBinding()
         setupView()
@@ -101,7 +100,7 @@ extension RMCharactersSelectorViewController {
     func setupSearchBarView() {
         search.searchBar.delegate = self
         search.searchResultsUpdater = self
-        search.searchBar.placeholder = "Type something here to search" // MISCO LOCALIZABLE
+        search.searchBar.placeholder = Localizables.searchBarPlaceHolder.localized
         search.obscuresBackgroundDuringPresentation = false
         search.hidesNavigationBarDuringPresentation = false
         navigationItem.hidesSearchBarWhenScrolling = false

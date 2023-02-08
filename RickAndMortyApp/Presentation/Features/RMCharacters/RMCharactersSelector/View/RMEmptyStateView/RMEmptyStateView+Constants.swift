@@ -15,6 +15,10 @@ extension RMEmptyStateView {
         static let messageNumberOfLines = 0
     }
     
+    enum Localizables {
+        static let searchBarEmptyStateMessage = "SearchEmptyStateMessage"
+    }
+    
     enum Fonts {
         static let messageFont = UIFont(name: "Shlop-Regular", size: 40)
     }

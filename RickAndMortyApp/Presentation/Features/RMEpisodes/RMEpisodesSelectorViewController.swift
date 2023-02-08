@@ -21,7 +21,6 @@ final class RMEpisodesSelectorViewController: UIViewController {
         super.viewDidLoad()
         
         view.backgroundColor = .systemBackground
-//        title = "Episodes" // MISCO LOCALIZABLE
         
         view.addSubview(episodesTableView)
         

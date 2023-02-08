@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+extension RMCharactersSelectorViewController {
+    
+    enum Localizables {
+        static let searchBarPlaceHolder = "SearchBarPlaceHolder"
+    }
+    
+}

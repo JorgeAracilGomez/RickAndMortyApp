@@ -5,3 +5,16 @@
   Created by Jorge Aracil Gomez on 8/2/23.
   
 */
+
+//MARK: Characters Localizables
+
+"Characters_Navigation_Title" = "Characters";
+
+//MARK: Episodes Localizables
+
+"Episodes_Navigation_Title" = "Episodes";
+
+// MARK: Common Localizables
+
+"SearchBarPlaceHolder" = "Type something here to search";
+"SearchEmptyStateMessage" = "Theres nothing here";

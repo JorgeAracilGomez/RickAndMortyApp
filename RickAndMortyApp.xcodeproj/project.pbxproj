@@ -23,6 +23,9 @@
 		961999372993AE1D00F956D4 /* RMCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961999362993AE1D00F956D4 /* RMCoordinator.swift */; };
 		961999392993AE4300F956D4 /* RMChildCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961999382993AE4300F956D4 /* RMChildCoordinator.swift */; };
 		9619993E2993B24000F956D4 /* RMCharactersSelectorViewController+SearchBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9619993D2993B24000F956D4 /* RMCharactersSelectorViewController+SearchBarDelegate.swift */; };
+		961999412993D55B00F956D4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 961999432993D55B00F956D4 /* Localizable.strings */; };
+		961999462993D63900F956D4 /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961999452993D63900F956D4 /* String+Localized.swift */; };
+		961999492993D79B00F956D4 /* RMCharactersSelectorViewController+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961999482993D79B00F956D4 /* RMCharactersSelectorViewController+Constants.swift */; };
 		96A2FA76298D250500676FA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A2FA75298D250500676FA5 /* AppDelegate.swift */; };
 		96A2FA78298D250500676FA5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A2FA77298D250500676FA5 /* SceneDelegate.swift */; };
 		96A2FA7F298D250600676FA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96A2FA7E298D250600676FA5 /* Assets.xcassets */; };
@@ -103,6 +106,9 @@
 		961999362993AE1D00F956D4 /* RMCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMCoordinator.swift; sourceTree = "<group>"; };
 		961999382993AE4300F956D4 /* RMChildCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMChildCoordinator.swift; sourceTree = "<group>"; };
 		9619993D2993B24000F956D4 /* RMCharactersSelectorViewController+SearchBarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RMCharactersSelectorViewController+SearchBarDelegate.swift"; sourceTree = "<group>"; };
+		961999422993D55B00F956D4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		961999452993D63900F956D4 /* String+Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
+		961999482993D79B00F956D4 /* RMCharactersSelectorViewController+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RMCharactersSelectorViewController+Constants.swift"; sourceTree = "<group>"; };
 		96A2FA72298D250500676FA5 /* RickAndMortyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickAndMortyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96A2FA75298D250500676FA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96A2FA77298D250500676FA5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -224,6 +230,22 @@
 			path = Features;
 			sourceTree = "<group>";
 		};
+		961999442993D62300F956D4 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				961999472993D63D00F956D4 /* Extensions */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		961999472993D63D00F956D4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				961999452993D63900F956D4 /* String+Localized.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		96A2FA69298D250500676FA5 = {
 			isa = PBXGroup;
 			children = (
@@ -254,6 +276,7 @@
 				96A2FABD298D74B000676FA5 /* Domain */,
 				96A2FAA5298D251800676FA5 /* Presentation */,
 				96A2FABB298D731700676FA5 /* Resources */,
+				961999442993D62300F956D4 /* Utils */,
 				96A2FA83298D250600676FA5 /* Info.plist */,
 			);
 			path = RickAndMortyApp;
@@ -338,6 +361,7 @@
 				9619992A29917D3300F956D4 /* shlop_rg.otf */,
 				96199918298DB2DE00F956D4 /* 98770-assistagro-loading-bars.json */,
 				96199926299172A900F956D4 /* 39138-morty-cry-loader.json */,
+				961999432993D55B00F956D4 /* Localizable.strings */,
 				96A2FA7E298D250600676FA5 /* Assets.xcassets */,
 				96A2FA80298D250600676FA5 /* LaunchScreen.storyboard */,
 			);
@@ -455,6 +479,7 @@
 				96A2FAF3298D8E6C00676FA5 /* RMLoadingCollectionViewCell */,
 				9619992C299182E700F956D4 /* RMEmptyStateView */,
 				96A2FAA6298D25E000676FA5 /* RMCharactersSelectorViewController.swift */,
+				961999482993D79B00F956D4 /* RMCharactersSelectorViewController+Constants.swift */,
 				96A2FB06298D9B0900676FA5 /* RMCharactersSelectorViewController+Constraints.swift */,
 				96A2FAED298D8CC900676FA5 /* RMCharactersSelectorViewController+CollectionViewLayout.swift */,
 				96A2FAEF298D8D6200676FA5 /* RMCharactersSelectorViewController+CollectionViewDataSource.swift */,
@@ -622,6 +647,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				96A2FA82298D250600676FA5 /* LaunchScreen.storyboard in Resources */,
+				961999412993D55B00F956D4 /* Localizable.strings in Resources */,
 				96199919298DB2DE00F956D4 /* 98770-assistagro-loading-bars.json in Resources */,
 				96199927299172A900F956D4 /* 39138-morty-cry-loader.json in Resources */,
 				96A2FA7F298D250600676FA5 /* Assets.xcassets in Resources */,
@@ -680,6 +706,8 @@
 				96A2FADD298D83C100676FA5 /* RMEpisodesList+Entity.swift in Sources */,
 				96A2FAF2298D8DF100676FA5 /* RMCharactersCollectionSection.swift in Sources */,
 				96A2FAE3298D861E00676FA5 /* RMCharactersUseCase.swift in Sources */,
+				961999462993D63900F956D4 /* String+Localized.swift in Sources */,
+				961999492993D79B00F956D4 /* RMCharactersSelectorViewController+Constants.swift in Sources */,
 				96A2FACA298D7B7C00676FA5 /* RMCharacter+Decodable.swift in Sources */,
 				96A2FB05298D99BB00676FA5 /* Boxing.swift in Sources */,
 				96A2FAC5298D7A5100676FA5 /* RMRequestInfo+Decodable.swift in Sources */,
@@ -737,6 +765,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		961999432993D55B00F956D4 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				961999422993D55B00F956D4 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		96A2FA80298D250600676FA5 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

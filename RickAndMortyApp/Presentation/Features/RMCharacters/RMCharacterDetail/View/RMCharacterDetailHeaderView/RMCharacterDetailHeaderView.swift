@@ -13,6 +13,12 @@ final class RMCharacterDetailHeaderView: UIView {
     
     private var model: RMCharacterDetailModel?
     
+    private (set) var shadowView: UIView = {
+        let shadowView = UIView(frame: .zero)
+        shadowView.translatesAutoresizingMaskIntoConstraints = false
+        return shadowView
+    }()
+    
     private (set) var characterImageView: UIImageView = {
         let characterImageView = UIImageView(frame: .zero)
         characterImageView.translatesAutoresizingMaskIntoConstraints = false
@@ -59,6 +65,7 @@ extension RMCharacterDetailHeaderView {
 extension RMCharacterDetailHeaderView {
     
     private func setupView() {
+        setupShadowView()
         setupCharacterImageView()
         setupStatusLabel()
         setupGenderInfoView()
@@ -66,8 +73,19 @@ extension RMCharacterDetailHeaderView {
         setupLocationsInfoView()
     }
     
+    private func setupShadowView() {
+        addSubview(shadowView)
+        shadowView.backgroundColor = .white
+        shadowView.layer.cornerRadius = Constants.shadowViewCornerRadius
+        shadowView.layer.shadowColor = UIColor.darkGray.cgColor
+        shadowView.layer.shadowOffset = Constants.shadowViewOffset
+        shadowView.layer.shadowRadius = Constants.shadowViewRadius
+        shadowView.layer.shadowOpacity = Constants.shadowViewOpacity
+        setupShadowViewConstraints()
+    }
+    
     private func setupCharacterImageView() {
-        addSubview(characterImageView)
+        shadowView.addSubview(characterImageView)
         characterImageView.layer.borderWidth = Constants.characterImageBorderWidth
         characterImageView.layer.cornerRadius = Constants.characterImageCornerRadius
         characterImageView.layer.borderColor = getStatusColor(for: model?.status).cgColor
@@ -86,7 +104,7 @@ extension RMCharacterDetailHeaderView {
     }
     
     private func setupStatusLabel() {
-        addSubview(statusLabel)
+        shadowView.addSubview(statusLabel)
         statusLabel.backgroundColor = getStatusColor(for: model?.status)
         statusLabel.font = Fonts.status
         statusLabel.text = model?.status.rawValue
@@ -108,21 +126,21 @@ extension RMCharacterDetailHeaderView {
     }
     
     private func setupGenderInfoView() {
-        addSubview(genderInfoView)
+        shadowView.addSubview(genderInfoView)
         genderInfoView.configure(withTitle: Localizables.genderTitle.localized,
                                  withDescription: model?.gender ?? Localizables.unknown.localized)
         setupGenderInfoViewConstraints()
     }
     
     private func setupSpeciesInfoView() {
-        addSubview(speciesInfoView)
+        shadowView.addSubview(speciesInfoView)
         speciesInfoView.configure(withTitle: Localizables.speciesTitle.localized,
                                    withDescription: model?.species ?? Localizables.unknown.localized)
         setupSpeciesInfoViewConstraints()
     }
     
     private func setupLocationsInfoView() {
-        addSubview(locationsInfoView)
+        shadowView.addSubview(locationsInfoView)
         locationsInfoView.configure(withTitle: Localizables.originLocationTitle.localized,
                                     withDescription: model?.origin.name ?? Localizables.unknown.localized,
                                     withSecondaryDescription: model?.location.name)

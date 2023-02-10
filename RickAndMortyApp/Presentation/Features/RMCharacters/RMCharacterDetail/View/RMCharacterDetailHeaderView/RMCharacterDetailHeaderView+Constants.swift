@@ -13,8 +13,12 @@ extension RMCharacterDetailHeaderView {
  
     enum Constants {
         static let characterImageBorderWidth: CGFloat = 4
-        static let characterImageCornerRadius: CGFloat = 100
+        static let characterImageCornerRadius: CGFloat = 80
         static let statusLabelCornerRadius: CGFloat = 5
+        static let shadowViewCornerRadius: CGFloat = 3
+        static let shadowViewOffset = CGSize(width: 0, height: 1.75)
+        static let shadowViewRadius: CGFloat = 1
+        static let shadowViewOpacity: Float = 0.45
     }
     
     enum Localizables {

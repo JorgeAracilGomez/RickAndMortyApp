@@ -25,10 +25,10 @@ final class DefaultRMCharacterDetailViewModel: RMCharacterDetailViewModel {
     var loadingStatus: Box<RMLoadingStatus?> = Box(nil)
     var model: Box<RMCharacterDetailModel?> = Box(nil)
     var error: Box<RMError?> = Box(nil)
-    var locationsUseCase: RMLocationsUseCase
+    var characterDetailUseCase: RMCharacterDetailUseCase
 
-    init(locationsUseCase: RMLocationsUseCase = DefaultRMLocationsUseCase()) {
-        self.locationsUseCase = locationsUseCase
+    init(characterDetailUseCase: RMCharacterDetailUseCase = DefaultRMCharacterDetailUseCase()) {
+        self.characterDetailUseCase = characterDetailUseCase
     }
 }
 
@@ -50,18 +50,17 @@ extension DefaultRMCharacterDetailViewModel {
         
         let originID = inputModel?.origin?.url?.split(separator: "/").last.map(String.init) ?? ""
         let locationID = inputModel?.location?.url?.split(separator: "/").last.map(String.init) ?? ""
-        let useCaseParemeters = RMLocationsUseCaseParameters(originID: originID, locationID: locationID)
+        let episodesIDs = inputModel?.episode?.compactMap({ $0.split(separator: "/").last.map(String.init) ?? "" })
         
-        loadingStatus.value = .start
-        locationsUseCase.execute(params: useCaseParemeters) { [weak self] result in
+        let useCaseParameters = RMCharacterDetailUseCaseParameters(originID: originID, locationID: locationID, episodesIDs: episodesIDs)
+        self.loadingStatus.value = .start
+        characterDetailUseCase.execute(params: useCaseParameters) { [weak self] result in
             switch result {
             case .success(let entity):
                 self?.loadingStatus.value = .stop
-                self?.createModel(with: entity, originID: originID, locationID: locationID)
-//                print("MISCO LOCATIONS ENTITY: \(entity)")
+                self?.createModel(withEntity: entity, forParameters: useCaseParameters)
             case .failure(let error):
                 self?.loadingStatus.value = .stop
-                print("MISCO LOCATIONS ERROR: \(error)")
                 self?.createErrorModel(error)
             }
         }
@@ -72,19 +71,16 @@ extension DefaultRMCharacterDetailViewModel {
 
 extension DefaultRMCharacterDetailViewModel {
  
-    func createModel(with entity: RMLocationsListEntity, originID: String, locationID: String) {
-        let originID: Int = Int(originID) ?? 0
-        let locationID: Int = Int(locationID) ?? 0
-        
+    func createModel(withEntity entity: RMCharacterDetailEntity, forParameters params: RMCharacterDetailUseCaseParameters) {
         guard let imagePath = inputModel?.image,
               let status = inputModel?.status,
               let gender = inputModel?.gender?.rawValue,
               let species = inputModel?.species,
-              let origin = entity.locations?.filter({ $0.id == originID }).first,
-              let location = entity.locations?.filter({ $0.id == locationID }).first else {
+              let origin = entity.locations?.filter({ $0.id == Int(params.originID) ?? 0 }).first,
+              let location = entity.locations?.filter({ $0.id == Int(params.locationID) ?? 0 }).first,
+              let episodes = entity.episodes else {
             
-            print("MISCO ERROR DE MODELO DE DETALLE")
-            
+            self.error.value = RMError.unknownError(message: "Could not get detail model in RMCharacterDetailViewModel")            
             return
         }
         
@@ -93,7 +89,8 @@ extension DefaultRMCharacterDetailViewModel {
                                                   gender: gender,
                                                   species: species,
                                                   origin: origin,
-                                                  location: location)        
+                                                  location: location,
+                                                  episodes: episodes)
     }
 
     func createErrorModel(_ error: RMError) {

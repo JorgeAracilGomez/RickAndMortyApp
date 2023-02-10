@@ -54,7 +54,7 @@ final class RMCharacterDetailHeaderView: UIView {
 
 extension RMCharacterDetailHeaderView {
     
-    public func configure(withModel model: RMCharacterDetailModel) { // MISCO CAMBIAR A MODELO
+    public func configure(withModel model: RMCharacterDetailModel) {
         self.model = model
         setupView()
     }

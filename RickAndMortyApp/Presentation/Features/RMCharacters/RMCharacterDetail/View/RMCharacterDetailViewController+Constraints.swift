@@ -18,4 +18,13 @@ extension RMCharacterDetailViewController {
             characterHeaderView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
         ])
     }
+    
+    func setupEpisodesTableViewConstraints() {
+        NSLayoutConstraint.activate([
+            episodesTableView.topAnchor.constraint(equalTo: characterHeaderView.bottomAnchor),
+            episodesTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            episodesTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            episodesTableView.bottomAnchor.constraint(equalTo: view.safeBottomAnchor)
+        ])
+    }
 }

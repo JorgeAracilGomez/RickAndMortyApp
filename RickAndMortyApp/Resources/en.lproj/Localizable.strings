@@ -16,9 +16,13 @@
 //MARK: Episodes Localizables
 
 "Episodes_Navigation_Title" = "Episodes";
+"Episodes_Featured_Title" = "Featured episodes";
 
 // MARK: Common Localizables
 
 "SearchBarPlaceHolder" = "Type something here to search";
 "SearchEmptyStateMessage" = "Theres nothing here";
 "unknown" = "unknown";
+"Error_Alert_Title" = "An error has occurred";
+"Error_Alert_Description" = "Please try again in a few moments.";
+"Error_Alert_Accept" = "Accept";

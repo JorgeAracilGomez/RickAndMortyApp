@@ -14,4 +14,5 @@ struct RMCharacterDetailModel {
     var species: String
     var origin: RMLocationEntity
     var location: RMLocationEntity
+    var episodes: [RMEpisodeEntity]
 }

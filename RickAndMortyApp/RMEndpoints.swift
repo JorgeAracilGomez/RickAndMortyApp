@@ -24,8 +24,8 @@ struct RMEndpoints {
     /// characters Key Filters
     static let pageKey = "/?page=%d"
     static let nameKey = "?name=%@"
-    static let statusKey = "&status=%@" // MISCO Incluir filtro
     static let locationsKey = "/%@"
+    static let episodesKey = "/,%@"
 }
 
 // MARK: Generate URL Formatted
@@ -34,7 +34,8 @@ extension RMEndpoints {
     
     static func generateURLWithParams(for endpoint: RMEndpoint,
                                       searchFilter: String? = nil,
-                                      locationsFilter: [String]? = nil) -> String {
+                                      locationsFilter: [String]? = nil,
+                                      episodesFilter: [String]? = nil) -> String {
         
         var url = self.baseURL + endpoint.rawValue
         
@@ -46,7 +47,12 @@ extension RMEndpoints {
             let locations = locationsFilter.joined(separator: ",")
             url += String(format: locationsKey, locations)
         }
-        
+                
+        if let episodesFilter = episodesFilter {
+            let episodes = episodesFilter.joined(separator: ",")
+            url += String(format: episodesKey, episodes)
+        }
+                
         return url
     }
 }

@@ -9,6 +9,9 @@
 //MARK: Characters Localizables
 
 "Characters_Navigation_Title" = "Characters";
+"Characters_gender_Title" = "GENDER";
+"Characters_species_Title" = "SPECIES";
+"Characters_OriginLocation_Title" = "ORIGIN / LOCATION";
 
 //MARK: Episodes Localizables
 
@@ -18,3 +21,4 @@
 
 "SearchBarPlaceHolder" = "Type something here to search";
 "SearchEmptyStateMessage" = "Theres nothing here";
+"unknown" = "unknown";

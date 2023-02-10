@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum RMCharacterGenderEntity: Equatable {
+enum RMCharacterGenderEntity: String, Equatable {
     
     /// Representation for all the Gender available cases ('Female', 'Male', 'Genderless' or 'unknown')
     case Female, Male, Genderless, Unknown

@@ -25,8 +25,16 @@ final class RMEmptyStateView: UIView {
     }()
     
     func configure() {
-        setupMessageLabel()
         setupAnimationView()
+        setupMessageLabel()
+    }
+    
+    func setupAnimationView() {
+        addSubview(animationView)
+        animationView.animation = LottieAnimation.named(LottieFiles.loading)
+        animationView.loopMode = .loop
+        animationView.play()
+        setupAnimationViewConstraints()
     }
     
     func setupMessageLabel() {
@@ -35,16 +43,6 @@ final class RMEmptyStateView: UIView {
         message.textAlignment = .center
         message.text = Localizables.searchBarEmptyStateMessage.localized
         message.font = Fonts.messageFont
-        
         setupMessageLabelConstraints()
-    }
-    
-    func setupAnimationView() {
-        addSubview(animationView)
-        animationView.animation = LottieAnimation.named(LottieFiles.loading)
-        animationView.loopMode = .loop
-        animationView.play()
-        
-        setupAnimationViewConstraints()
     }
 }

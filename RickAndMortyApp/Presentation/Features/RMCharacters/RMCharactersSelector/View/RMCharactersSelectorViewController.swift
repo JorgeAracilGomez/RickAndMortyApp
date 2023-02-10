@@ -41,13 +41,6 @@ final class RMCharactersSelectorViewController: RMBaseViewController {
         return delegate
     }()
     
-    private lazy var charactersCollectionEmptyStateView: RMEmptyStateView = {
-        let emptyStateView = RMEmptyStateView(frame: .zero)
-        emptyStateView.translatesAutoresizingMaskIntoConstraints = false
-        emptyStateView.configure()
-        return emptyStateView
-    }()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -116,16 +109,9 @@ extension RMCharactersSelectorViewController {
     
     func setupCharactersCollectionView() {
         self.view.addSubview(charactersCollectionView)
-        let background = RMEmptyStateView(frame: .zero)
-        background.configure()
         charactersCollectionView.dataSource = charactersCollectionViewDataSource
         charactersCollectionView.delegate = charactersCollectionViewDelegate
         charactersCollectionView.backgroundColor = .systemGroupedBackground
-        charactersCollectionView.backgroundView = background
-        charactersCollectionView.backgroundView?.isHidden = true
-        
-        // MISCO REVISAR CONSTRAINTS
-        
         setupCharactersCollectionViewConstraints()
     }
 }
@@ -150,8 +136,15 @@ extension RMCharactersSelectorViewController {
     }
     
     func mannageEmptyStateView(for state: Bool) {
+        
         DispatchQueue.main.async {
-            self.charactersCollectionView.backgroundView?.isHidden = !state
+            if state {
+                let background = RMEmptyStateView(frame: .zero)
+                background.configure()
+                self.charactersCollectionView.backgroundView = background
+            } else {
+                self.charactersCollectionView.backgroundView = nil
+            }
         }
     }
 }

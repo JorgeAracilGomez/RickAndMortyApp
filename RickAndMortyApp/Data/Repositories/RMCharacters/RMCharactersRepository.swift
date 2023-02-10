@@ -11,7 +11,7 @@ import Foundation
 
 protocol RMCharactersRepository {
     
-    /// Method that fetch the product transactions
+    /// Method that fetch the characters list
     /// - Parameter params: Input parameters for fetch the characters list.
     /// - Parameter completion: Returns a characters list Decodable or an error.
     func getCharacters(params: RMCharactersRepositoryParameters,
@@ -67,7 +67,7 @@ extension DefaultRMCharactersRepository {
         }
         
         guard let decodable = try? JSONDecoder().decode(RMCharactersListDecodable.self, from: data) else {
-            completion(.failure(RMError.decodeError(forDecodable: "GNBProductTransactionListDecodable")))
+            completion(.failure(RMError.decodeError(forDecodable: "RMCharactersListDecodable")))
             return
         }
         

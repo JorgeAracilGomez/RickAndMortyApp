@@ -11,9 +11,9 @@ import Foundation
 
 protocol RMCharacterDetailUseCase {
     
-    /// Method that fetch the characters basen on a input parameters.
-    /// - Parameter params: Input parameters for fetch the characters list.
-    /// - Parameter completion: Returns a characters list Entity or an error.
+    /// Method that fetch the character detail info basen on a input parameters.
+    /// - Parameter params: Input parameters for fetch the character detail info.
+    /// - Parameter completion: Returns a character detail Entity or an error.
     func execute(params: RMCharacterDetailUseCaseParameters, completion: @escaping (Result<RMCharacterDetailEntity, RMError>) -> Void)
 }
 
@@ -23,9 +23,9 @@ final class DefaultRMCharacterDetailUseCase: RMCharacterDetailUseCase {
     
     private var locationsUseCase: RMLocationsUseCase
     private var episodesUseCase: RMEpisodesUseCase
-    
     private var locationsEntity: RMLocationsListEntity?
     private var episodesEntity: RMEpisodesListEntity?
+    let dispatchGroup = DispatchGroup()
     
     init(locationsUseCase: RMLocationsUseCase = DefaultRMLocationsUseCase(),
          episodesUseCase: RMEpisodesUseCase = DefaultRMEpisodesUseCase()) {
@@ -42,9 +42,18 @@ extension DefaultRMCharacterDetailUseCase {
     func execute(params: RMCharacterDetailUseCaseParameters,
                  completion: @escaping (Result<RMCharacterDetailEntity, RMError>) -> Void) {
         
-        // MISCO DISPATCH GROUP
+        fetchLocations(intoGroup: dispatchGroup, params: params, completion: completion)
+        fetchEpisodes(intoGroup: dispatchGroup, params: params, completion: completion)
         
-        fetchLocations(params: params, completion: completion)
+        dispatchGroup.notify(queue: .main) {
+            guard let locationsEntity = self.locationsEntity, let episodesEntity = self.episodesEntity else {
+                let error = RMError.unknownError(message: "Could not get the data to build RMCharacterDetailEntity in RMCharacterDetailUseCase")
+                return
+            }
+            
+            let entity = RMCharacterDetailEntity(locationsEntity: locationsEntity, episodesEntity: episodesEntity)
+            completion(.success(entity))
+        }
     }
 }
 
@@ -52,15 +61,18 @@ extension DefaultRMCharacterDetailUseCase {
 
 extension DefaultRMCharacterDetailUseCase {
     
-    private func fetchLocations(params: RMCharacterDetailUseCaseParameters,
-                                  completion: @escaping (Result<RMCharacterDetailEntity, RMError>) -> Void) {
+    private func fetchLocations(intoGroup group: DispatchGroup,
+                                params: RMCharacterDetailUseCaseParameters,
+                                completion: @escaping (Result<RMCharacterDetailEntity, RMError>) -> Void) {
+        
+        group.enter()
         
         let useCaseParemeters = RMLocationsUseCaseParameters(originID: params.originID, locationID: params.locationID)
         locationsUseCase.execute(params: useCaseParemeters) { [weak self] result in
+            defer { group.leave() }
             switch result {
             case .success(let locationsEntity):
                 self?.locationsEntity = locationsEntity
-                self?.fetchEpisodes(params: params, locationsEntity: locationsEntity, completion: completion)
             case .failure(let error):
                 completion(.failure(error))
             }
@@ -72,16 +84,18 @@ extension DefaultRMCharacterDetailUseCase {
 
 extension DefaultRMCharacterDetailUseCase {
     
-    private func fetchEpisodes(params: RMCharacterDetailUseCaseParameters,
-                               locationsEntity: RMLocationsListEntity,
+    private func fetchEpisodes(intoGroup group: DispatchGroup,
+                               params: RMCharacterDetailUseCaseParameters,
                                completion: @escaping (Result<RMCharacterDetailEntity, RMError>) -> Void) {
         
+        group.enter()
+        
         let episodesUseCaseParameters = RMEpisodesUseCaseParameters(episodesIDs: params.episodesIDs)
-        episodesUseCase.execute(params: episodesUseCaseParameters) { result in
+        episodesUseCase.execute(params: episodesUseCaseParameters) { [weak self] result in
+            defer { group.leave() }
             switch result {
             case .success(let episodesEntity):
-                let entity = RMCharacterDetailEntity(locationsEntity: locationsEntity, episodesEntity: episodesEntity)
-                completion(.success(entity))
+                self?.episodesEntity = episodesEntity
             case .failure(let error):
                 completion(.failure(error))
             }

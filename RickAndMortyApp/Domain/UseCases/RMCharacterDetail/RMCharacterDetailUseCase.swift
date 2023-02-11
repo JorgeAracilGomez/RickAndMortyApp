@@ -25,7 +25,8 @@ final class DefaultRMCharacterDetailUseCase: RMCharacterDetailUseCase {
     private var episodesUseCase: RMEpisodesUseCase
     private var locationsEntity: RMLocationsListEntity?
     private var episodesEntity: RMEpisodesListEntity?
-    let dispatchGroup = DispatchGroup()
+    private let dispatchGroup = DispatchGroup()
+    private var dispatchGroupError: RMError?
     
     init(locationsUseCase: RMLocationsUseCase = DefaultRMLocationsUseCase(),
          episodesUseCase: RMEpisodesUseCase = DefaultRMEpisodesUseCase()) {
@@ -46,6 +47,11 @@ extension DefaultRMCharacterDetailUseCase {
         fetchEpisodes(intoGroup: dispatchGroup, params: params, completion: completion)
         
         dispatchGroup.notify(queue: .main) {
+            
+            if let error = self.dispatchGroupError {
+                completion(.failure(error))
+            }
+            
             guard let locationsEntity = self.locationsEntity, let episodesEntity = self.episodesEntity else {
                 let error = RMError.unknownError(message: "Could not get the data to build RMCharacterDetailEntity in RMCharacterDetailUseCase")
                 return
@@ -74,7 +80,7 @@ extension DefaultRMCharacterDetailUseCase {
             case .success(let locationsEntity):
                 self?.locationsEntity = locationsEntity
             case .failure(let error):
-                completion(.failure(error))
+                self?.dispatchGroupError = error
             }
         }
     }
@@ -97,7 +103,7 @@ extension DefaultRMCharacterDetailUseCase {
             case .success(let episodesEntity):
                 self?.episodesEntity = episodesEntity
             case .failure(let error):
-                completion(.failure(error))
+                self?.dispatchGroupError = error
             }
         }
     }

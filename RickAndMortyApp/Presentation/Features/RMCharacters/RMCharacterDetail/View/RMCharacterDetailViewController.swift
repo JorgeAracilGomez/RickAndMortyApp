@@ -137,6 +137,8 @@ extension RMCharacterDetailViewController {
 extension RMCharacterDetailViewController {
     
     func showErrorAlert(for error: RMError) {
-        coordinator?.showAlert(error: error)
+        DispatchQueue.main.async {
+            self.coordinator?.showAlert(error: error)
+        }
     }
 }

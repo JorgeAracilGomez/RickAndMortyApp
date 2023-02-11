@@ -9,7 +9,6 @@ import Foundation
 
 protocol RMCharacterDetailViewModel: RMCharacterDetailViewModelInput, RMCharacterDetailViewModelOutput {}
 
-
 protocol RMCharacterDetailViewModelInput {
     func viewDidLoad(forInputModel model: RMCharacterEntity)
 }
@@ -48,9 +47,9 @@ extension DefaultRMCharacterDetailViewModel {
     
     func fetchData() {
         
-        let originID = inputModel?.origin?.url?.split(separator: "/").last.map(String.init) ?? ""
-        let locationID = inputModel?.location?.url?.split(separator: "/").last.map(String.init) ?? ""
-        let episodesIDs = inputModel?.episode?.compactMap({ $0.split(separator: "/").last.map(String.init) ?? "" })
+        let originID = inputModel?.origin?.url?.split(separator: "/").last.map(String.init) ?? "0"
+        let locationID = inputModel?.location?.url?.split(separator: "/").last.map(String.init) ?? "0"
+        let episodesIDs = inputModel?.episode?.compactMap({ $0.split(separator: "/").last.map(String.init) ?? "0" })
         
         let useCaseParameters = RMCharacterDetailUseCaseParameters(originID: originID, locationID: locationID, episodesIDs: episodesIDs)
         self.loadingStatus.value = .start

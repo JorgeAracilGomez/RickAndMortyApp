@@ -70,7 +70,7 @@ final class RMEpisodeDetailViewModelTest: XCTestCase {
 
         episodesSelectorViewModel?.episodeDetailModel.bind { productDetailModel in
             guard let productDetailModel = productDetailModel else { return }
-            self.successViewModel?.viewDidLoad(forInputModel: productDetailModel)
+            self.successViewModel?.viewDidLoad(forInputModel: productDetailModel) // MISCO
         }
 
         episodesSelectorViewModel?.viewDidLoad()
@@ -81,6 +81,8 @@ final class RMEpisodeDetailViewModelTest: XCTestCase {
     func testViewDidLoad_UseCaseFailure() {
         let expectation = expectation(description: "After the execution error of the UseCase, an error should be received and it should not be null")
 
+        // MISCO FALTA EL MODEL
+        
         failureViewModel?.error.bind { error in
             guard let error = error else { return }
             XCTAssertNotNil(error)

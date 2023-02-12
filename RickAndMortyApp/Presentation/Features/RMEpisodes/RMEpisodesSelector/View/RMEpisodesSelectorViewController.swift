@@ -74,12 +74,12 @@ extension RMEpisodesSelectorViewController {
             self.mannageEmptyStateView(for: emptyState)
         }
         
-//        viewModel.episodeDetailModel.bind { [weak self] detailModel in
-//            guard let detailModel = detailModel,
-//                  let self = self else { return }
-//
-//            self.showEpisodeDetailView(for: detailModel)
-//        }
+        viewModel.episodeDetailModel.bind { [weak self] detailModel in
+            guard let detailModel = detailModel,
+                  let self = self else { return }
+
+            self.showEpisodeDetailView(for: detailModel)
+        }
     }
 }
 

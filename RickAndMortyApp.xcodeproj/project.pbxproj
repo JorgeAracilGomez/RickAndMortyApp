@@ -97,7 +97,7 @@
 		96A2FAAF298D3F3800676FA5 /* RMHomeTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A2FAAE298D3F3800676FA5 /* RMHomeTabBarViewController.swift */; };
 		96A2FAB1298D422900676FA5 /* RMEpisodesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A2FAB0298D422900676FA5 /* RMEpisodesCoordinator.swift */; };
 		96A2FAB3298D426F00676FA5 /* RMEpisodesSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A2FAB2298D426F00676FA5 /* RMEpisodesSelectorViewController.swift */; };
-		96A2FAB7298D728F00676FA5 /* RMEpisodesDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A2FAB6298D728F00676FA5 /* RMEpisodesDetailViewController.swift */; };
+		96A2FAB7298D728F00676FA5 /* RMEpisodeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A2FAB6298D728F00676FA5 /* RMEpisodeDetailViewController.swift */; };
 		96A2FAC3298D79C600676FA5 /* RMCharactersList+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A2FAC2298D79C600676FA5 /* RMCharactersList+Decodable.swift */; };
 		96A2FAC5298D7A5100676FA5 /* RMRequestInfo+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A2FAC4298D7A5100676FA5 /* RMRequestInfo+Decodable.swift */; };
 		96A2FAC8298D7B6900676FA5 /* RMCharacterLocation+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A2FAC7298D7B6900676FA5 /* RMCharacterLocation+Decodable.swift */; };
@@ -241,7 +241,7 @@
 		96A2FAAE298D3F3800676FA5 /* RMHomeTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMHomeTabBarViewController.swift; sourceTree = "<group>"; };
 		96A2FAB0298D422900676FA5 /* RMEpisodesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMEpisodesCoordinator.swift; sourceTree = "<group>"; };
 		96A2FAB2298D426F00676FA5 /* RMEpisodesSelectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMEpisodesSelectorViewController.swift; sourceTree = "<group>"; };
-		96A2FAB6298D728F00676FA5 /* RMEpisodesDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMEpisodesDetailViewController.swift; sourceTree = "<group>"; };
+		96A2FAB6298D728F00676FA5 /* RMEpisodeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMEpisodeDetailViewController.swift; sourceTree = "<group>"; };
 		96A2FAC2298D79C600676FA5 /* RMCharactersList+Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RMCharactersList+Decodable.swift"; sourceTree = "<group>"; };
 		96A2FAC4298D7A5100676FA5 /* RMRequestInfo+Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RMRequestInfo+Decodable.swift"; sourceTree = "<group>"; };
 		96A2FAC7298D7B6900676FA5 /* RMCharacterLocation+Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RMCharacterLocation+Decodable.swift"; sourceTree = "<group>"; };
@@ -636,6 +636,14 @@
 			path = RMLoadingTableViewCell;
 			sourceTree = "<group>";
 		};
+		962C8B422998DF05004E7FFF /* RMEpisodeDetail */ = {
+			isa = PBXGroup;
+			children = (
+				96A2FAB6298D728F00676FA5 /* RMEpisodeDetailViewController.swift */,
+			);
+			path = RMEpisodeDetail;
+			sourceTree = "<group>";
+		};
 		96A2FA69298D250500676FA5 = {
 			isa = PBXGroup;
 			children = (
@@ -717,7 +725,7 @@
 			children = (
 				96A2FAB8298D72A900676FA5 /* Coordinator */,
 				962C8B2A2998CEDE004E7FFF /* RMEpisodesSelector */,
-				96A2FAB6298D728F00676FA5 /* RMEpisodesDetailViewController.swift */,
+				962C8B422998DF05004E7FFF /* RMEpisodeDetail */,
 			);
 			path = RMEpisodes;
 			sourceTree = "<group>";
@@ -1162,7 +1170,7 @@
 				962C8B312998D39B004E7FFF /* RMEpisodesSelectorViewController+Constraints.swift in Sources */,
 				962C8AFA2996A5C3004E7FFF /* RMCharacterDetailUseCase+Parameters.swift in Sources */,
 				96A2FAB1298D422900676FA5 /* RMEpisodesCoordinator.swift in Sources */,
-				96A2FAB7298D728F00676FA5 /* RMEpisodesDetailViewController.swift in Sources */,
+				96A2FAB7298D728F00676FA5 /* RMEpisodeDetailViewController.swift in Sources */,
 				96A2FAEE298D8CC900676FA5 /* RMCharactersSelectorViewController+CollectionViewLayout.swift in Sources */,
 				96A2FAEC298D88BD00676FA5 /* RMCharactersSelectorModel.swift in Sources */,
 				9619994E2993D95D00F956D4 /* RMBaseViewController.swift in Sources */,

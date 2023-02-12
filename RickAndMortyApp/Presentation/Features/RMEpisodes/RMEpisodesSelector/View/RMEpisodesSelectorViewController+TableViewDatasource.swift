@@ -31,7 +31,7 @@ final class RMEpisodesTableViewDataSource: NSObject, UITableViewDataSource {
     
     func registerCells() {
         tableView.register(RMCharacterDescriptionEpisodeCell.self, forCellReuseIdentifier: CellIdentifiers.episodeTableViewCell) // MISCO CELL REUTILIZADA
-        tableView.register(RMLoadingTableViewCell.self, forCellReuseIdentifier: CellIdentifiers.loadingTableViewCell) // MISCO CELL REUTILIZADA
+        tableView.register(RMLoadingTableViewCell.self, forCellReuseIdentifier: CellIdentifiers.loadingTableViewCell)
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -41,8 +41,6 @@ final class RMEpisodesTableViewDataSource: NSObject, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return viewModel.model.value?.episodes.count ?? 0
-        
         guard let listSection = RMEpisodesTableSection(rawValue: section),
               let episodesCount = self.viewModel.model.value?.episodes.count else { return 0 }
         
@@ -50,17 +48,11 @@ final class RMEpisodesTableViewDataSource: NSObject, UITableViewDataSource {
         case .episodesList:
             return episodesCount
         case .loader:
-            return 1//MISCOepisodesCount >= pageLimit ? 1 : 0
+            return 1
         }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        
-            
-        
-        
-        
         guard let section = RMEpisodesTableSection(rawValue: indexPath.section) else {
             return UITableViewCell()
         }

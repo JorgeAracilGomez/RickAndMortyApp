@@ -43,7 +43,7 @@ final class RMEpisodeDetailViewModelTest: XCTestCase {
     }
     
     func testViewDidLoad_UseCaseSucces() {
-        let expectation = expectation(description: "When the UseCase executes successfully, it must correctly format the data in the inputModel to generate the view model. This model should have a product name (sku), totalBalance, and a correctly formatted transaction array.") // MISCO
+        let expectation = expectation(description: "When the UseCase executes successfully, it must correctly format the data in the inputModel to generate the model of the view. This model should have a valid data and must be binded to the view.")
 
         successViewModel?.model.bind { model in
             guard let model = model else { return }
@@ -68,9 +68,9 @@ final class RMEpisodeDetailViewModelTest: XCTestCase {
             self.episodesSelectorViewModel?.selectCell(atIndex: 0)
         }
 
-        episodesSelectorViewModel?.episodeDetailModel.bind { productDetailModel in
-            guard let productDetailModel = productDetailModel else { return }
-            self.successViewModel?.viewDidLoad(forInputModel: productDetailModel) // MISCO
+        episodesSelectorViewModel?.episodeDetailModel.bind { episodeDetailModel in
+            guard let episodeDetailModel = episodeDetailModel else { return }
+            self.successViewModel?.viewDidLoad(forInputModel: episodeDetailModel)
         }
 
         episodesSelectorViewModel?.viewDidLoad()

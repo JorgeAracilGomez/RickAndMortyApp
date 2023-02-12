@@ -60,6 +60,20 @@
 		962C8B022996A784004E7FFF /* RMEpisodesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962C8B012996A784004E7FFF /* RMEpisodesRepository.swift */; };
 		962C8B042996A791004E7FFF /* RMEpisodesRepository+Parameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962C8B032996A791004E7FFF /* RMEpisodesRepository+Parameters.swift */; };
 		962C8B072996ACC7004E7FFF /* RMCharacterDetail+Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962C8B062996ACC7004E7FFF /* RMCharacterDetail+Entity.swift */; };
+		962C8B0E29979D8A004E7FFF /* RMCharactersRepositorySuccess+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962C8B0D29979D8A004E7FFF /* RMCharactersRepositorySuccess+Mock.swift */; };
+		962C8B1029979F3C004E7FFF /* RMCharactersList+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962C8B0F29979F3C004E7FFF /* RMCharactersList+Mock.swift */; };
+		962C8B122997A015004E7FFF /* RMCharactersUseCase+Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962C8B112997A015004E7FFF /* RMCharactersUseCase+Test.swift */; };
+		962C8B142997AC41004E7FFF /* RMCharactersRepositoryFailure+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962C8B132997AC41004E7FFF /* RMCharactersRepositoryFailure+Mock.swift */; };
+		962C8B162997B87E004E7FFF /* RMLocationsList+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962C8B152997B87E004E7FFF /* RMLocationsList+Mock.swift */; };
+		962C8B182997B8CF004E7FFF /* RMLocationsRepositorySuccess+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962C8B172997B8CF004E7FFF /* RMLocationsRepositorySuccess+Mock.swift */; };
+		962C8B1A2997B8DB004E7FFF /* RMLocationsRepositoryFailure+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962C8B192997B8DB004E7FFF /* RMLocationsRepositoryFailure+Mock.swift */; };
+		962C8B1C2997B9EE004E7FFF /* RMLocationsUseCase+Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962C8B1B2997B9EE004E7FFF /* RMLocationsUseCase+Test.swift */; };
+		962C8B1E2997BD61004E7FFF /* RMCharacterDetailUseCase+Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962C8B1D2997BD61004E7FFF /* RMCharacterDetailUseCase+Test.swift */; };
+		962C8B202997C0D8004E7FFF /* RMEpisodesList+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962C8B1F2997C0D8004E7FFF /* RMEpisodesList+Mock.swift */; };
+		962C8B222997C12D004E7FFF /* RMEpisodesRepositoryResultsSuccess+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962C8B212997C12D004E7FFF /* RMEpisodesRepositoryResultsSuccess+Mock.swift */; };
+		962C8B242997C13A004E7FFF /* RMEpisodesRepositoryFailure+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962C8B232997C13A004E7FFF /* RMEpisodesRepositoryFailure+Mock.swift */; };
+		962C8B262997C5FD004E7FFF /* RMEpisodesUseCase+Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962C8B252997C5FD004E7FFF /* RMEpisodesUseCase+Test.swift */; };
+		962C8B2829985E4F004E7FFF /* RMEpisodesRepositoryFullSuccessMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962C8B2729985E4F004E7FFF /* RMEpisodesRepositoryFullSuccessMock.swift */; };
 		96A2FA76298D250500676FA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A2FA75298D250500676FA5 /* AppDelegate.swift */; };
 		96A2FA78298D250500676FA5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A2FA77298D250500676FA5 /* SceneDelegate.swift */; };
 		96A2FA7F298D250600676FA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96A2FA7E298D250600676FA5 /* Assets.xcassets */; };
@@ -177,6 +191,20 @@
 		962C8B012996A784004E7FFF /* RMEpisodesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMEpisodesRepository.swift; sourceTree = "<group>"; };
 		962C8B032996A791004E7FFF /* RMEpisodesRepository+Parameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RMEpisodesRepository+Parameters.swift"; sourceTree = "<group>"; };
 		962C8B062996ACC7004E7FFF /* RMCharacterDetail+Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RMCharacterDetail+Entity.swift"; sourceTree = "<group>"; };
+		962C8B0D29979D8A004E7FFF /* RMCharactersRepositorySuccess+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RMCharactersRepositorySuccess+Mock.swift"; sourceTree = "<group>"; };
+		962C8B0F29979F3C004E7FFF /* RMCharactersList+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RMCharactersList+Mock.swift"; sourceTree = "<group>"; };
+		962C8B112997A015004E7FFF /* RMCharactersUseCase+Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RMCharactersUseCase+Test.swift"; sourceTree = "<group>"; };
+		962C8B132997AC41004E7FFF /* RMCharactersRepositoryFailure+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RMCharactersRepositoryFailure+Mock.swift"; sourceTree = "<group>"; };
+		962C8B152997B87E004E7FFF /* RMLocationsList+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RMLocationsList+Mock.swift"; sourceTree = "<group>"; };
+		962C8B172997B8CF004E7FFF /* RMLocationsRepositorySuccess+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RMLocationsRepositorySuccess+Mock.swift"; sourceTree = "<group>"; };
+		962C8B192997B8DB004E7FFF /* RMLocationsRepositoryFailure+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RMLocationsRepositoryFailure+Mock.swift"; sourceTree = "<group>"; };
+		962C8B1B2997B9EE004E7FFF /* RMLocationsUseCase+Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RMLocationsUseCase+Test.swift"; sourceTree = "<group>"; };
+		962C8B1D2997BD61004E7FFF /* RMCharacterDetailUseCase+Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RMCharacterDetailUseCase+Test.swift"; sourceTree = "<group>"; };
+		962C8B1F2997C0D8004E7FFF /* RMEpisodesList+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RMEpisodesList+Mock.swift"; sourceTree = "<group>"; };
+		962C8B212997C12D004E7FFF /* RMEpisodesRepositoryResultsSuccess+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RMEpisodesRepositoryResultsSuccess+Mock.swift"; sourceTree = "<group>"; };
+		962C8B232997C13A004E7FFF /* RMEpisodesRepositoryFailure+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RMEpisodesRepositoryFailure+Mock.swift"; sourceTree = "<group>"; };
+		962C8B252997C5FD004E7FFF /* RMEpisodesUseCase+Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RMEpisodesUseCase+Test.swift"; sourceTree = "<group>"; };
+		962C8B2729985E4F004E7FFF /* RMEpisodesRepositoryFullSuccessMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMEpisodesRepositoryFullSuccessMock.swift; sourceTree = "<group>"; };
 		96A2FA72298D250500676FA5 /* RickAndMortyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickAndMortyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96A2FA75298D250500676FA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96A2FA77298D250500676FA5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -482,6 +510,57 @@
 			path = RMCharacterDetail;
 			sourceTree = "<group>";
 		};
+		962C8B0829979D34004E7FFF /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				962C8B0B29979D62004E7FFF /* Repositories */,
+				962C8B0C29979D69004E7FFF /* RawData */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		962C8B0929979D44004E7FFF /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				962C8B112997A015004E7FFF /* RMCharactersUseCase+Test.swift */,
+				962C8B1D2997BD61004E7FFF /* RMCharacterDetailUseCase+Test.swift */,
+				962C8B1B2997B9EE004E7FFF /* RMLocationsUseCase+Test.swift */,
+				962C8B252997C5FD004E7FFF /* RMEpisodesUseCase+Test.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		962C8B0A29979D4C004E7FFF /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		962C8B0B29979D62004E7FFF /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				962C8B0D29979D8A004E7FFF /* RMCharactersRepositorySuccess+Mock.swift */,
+				962C8B132997AC41004E7FFF /* RMCharactersRepositoryFailure+Mock.swift */,
+				962C8B172997B8CF004E7FFF /* RMLocationsRepositorySuccess+Mock.swift */,
+				962C8B192997B8DB004E7FFF /* RMLocationsRepositoryFailure+Mock.swift */,
+				962C8B2729985E4F004E7FFF /* RMEpisodesRepositoryFullSuccessMock.swift */,
+				962C8B212997C12D004E7FFF /* RMEpisodesRepositoryResultsSuccess+Mock.swift */,
+				962C8B232997C13A004E7FFF /* RMEpisodesRepositoryFailure+Mock.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		962C8B0C29979D69004E7FFF /* RawData */ = {
+			isa = PBXGroup;
+			children = (
+				962C8B0F29979F3C004E7FFF /* RMCharactersList+Mock.swift */,
+				962C8B152997B87E004E7FFF /* RMLocationsList+Mock.swift */,
+				962C8B1F2997C0D8004E7FFF /* RMEpisodesList+Mock.swift */,
+			);
+			path = RawData;
+			sourceTree = "<group>";
+		};
 		96A2FA69298D250500676FA5 = {
 			isa = PBXGroup;
 			children = (
@@ -521,6 +600,9 @@
 		96A2FA8B298D250600676FA5 /* RickAndMortyAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				962C8B0829979D34004E7FFF /* Mock */,
+				962C8B0929979D44004E7FFF /* Domain */,
+				962C8B0A29979D4C004E7FFF /* Presentation */,
 				96A2FA8C298D250600676FA5 /* RickAndMortyAppTests.swift */,
 			);
 			path = RickAndMortyAppTests;
@@ -1016,7 +1098,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				962C8B122997A015004E7FFF /* RMCharactersUseCase+Test.swift in Sources */,
+				962C8B1C2997B9EE004E7FFF /* RMLocationsUseCase+Test.swift in Sources */,
+				962C8B182997B8CF004E7FFF /* RMLocationsRepositorySuccess+Mock.swift in Sources */,
+				962C8B1A2997B8DB004E7FFF /* RMLocationsRepositoryFailure+Mock.swift in Sources */,
+				962C8B142997AC41004E7FFF /* RMCharactersRepositoryFailure+Mock.swift in Sources */,
+				962C8B242997C13A004E7FFF /* RMEpisodesRepositoryFailure+Mock.swift in Sources */,
+				962C8B202997C0D8004E7FFF /* RMEpisodesList+Mock.swift in Sources */,
+				962C8B222997C12D004E7FFF /* RMEpisodesRepositoryResultsSuccess+Mock.swift in Sources */,
+				962C8B0E29979D8A004E7FFF /* RMCharactersRepositorySuccess+Mock.swift in Sources */,
+				962C8B1029979F3C004E7FFF /* RMCharactersList+Mock.swift in Sources */,
 				96A2FA8D298D250600676FA5 /* RickAndMortyAppTests.swift in Sources */,
+				962C8B162997B87E004E7FFF /* RMLocationsList+Mock.swift in Sources */,
+				962C8B262997C5FD004E7FFF /* RMEpisodesUseCase+Test.swift in Sources */,
+				962C8B1E2997BD61004E7FFF /* RMCharacterDetailUseCase+Test.swift in Sources */,
+				962C8B2829985E4F004E7FFF /* RMEpisodesRepositoryFullSuccessMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

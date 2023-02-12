@@ -11,9 +11,25 @@ struct RMEpisodesListDecodable: Codable {
     var info: RMRequestInfoDecodable?
     var results: [RMEpisodeDecodable]?
     
-    /// Decodes the info for non-primaryKey response json data.
+    enum ConfigKeys: String, CodingKey {
+        case info
+        case results
+    }
+    
+    enum OnlyResultsKeys: String, CodingKey {
+        case results
+    }
+    
     init(from decoder: Decoder) throws {
-        let container = try decoder.singleValueContainer()
-        results = try container.decode([RMEpisodeDecodable].self)
+        do {
+            let values = try decoder.container(keyedBy: CodingKeys.self)
+            self.info = try values.decode(RMRequestInfoDecodable.self, forKey: .info)
+            self.results = try values.decode([RMEpisodeDecodable].self, forKey: .results)
+            return
+        } catch {
+            let container = try decoder.singleValueContainer()
+            results = try container.decode([RMEpisodeDecodable].self)
+            return
+        }
     }
 }

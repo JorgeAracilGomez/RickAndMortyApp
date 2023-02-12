@@ -27,8 +27,7 @@ final class DefaultRMEpisodesRepository: RMEpisodesRepository {
     func getEpisodes(params: RMEpisodesRepositoryParameters,
                      completion: @escaping (Result<RMEpisodesListDecodable, RMError>) -> Void) {
     
-        let endpoint = params.paginationUrl ?? RMEndpoints.generateURLWithParams(for: .episode, episodesFilter: params.episodeIDs)
-        
+        var endpoint = params.paginationUrl ?? RMEndpoints.generateURLWithParams(for: .episode, episodesFilter: params.episodeIDs)
         task?.cancel()
         
         guard let url = URL(string: endpoint) else {

@@ -44,8 +44,6 @@ final class RMCharactersSelectorViewController: RMBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .white
-
         setupBinding()
         setupView()
         viewModel.viewDidLoad()
@@ -93,6 +91,7 @@ extension RMCharactersSelectorViewController {
 extension RMCharactersSelectorViewController {
     
     func setupView() {
+        view.backgroundColor = .systemBackground
         setupSearchBarView()
         setupCharactersCollectionView()
     }

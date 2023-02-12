@@ -13,7 +13,7 @@ extension RMCharactersSelectorViewController {
     
     func setupCharactersCollectionViewConstraints() {
         NSLayoutConstraint.activate([
-            charactersCollectionView.topAnchor.constraint(equalTo: view.topAnchor),
+            charactersCollectionView.topAnchor.constraint(equalTo: view.safeTopAnchor),
             charactersCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             charactersCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             charactersCollectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor),

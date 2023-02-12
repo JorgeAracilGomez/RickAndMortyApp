@@ -11,7 +11,7 @@ import UIKit
 
 extension RMEpisodesTableViewDataSource {
     enum CellIdentifiers {
-        static let episodeTableViewCell = "RMCharacterDescriptionEpisodeCell" // MISCO NOMBRE
+        static let episodeTableViewCell = "RMEpisodeTableViewCell"
         static let loadingTableViewCell = "RMLoadingTableViewCell"
     }
 }
@@ -30,7 +30,7 @@ final class RMEpisodesTableViewDataSource: NSObject, UITableViewDataSource {
     }
     
     func registerCells() {
-        tableView.register(RMCharacterDescriptionEpisodeCell.self, forCellReuseIdentifier: CellIdentifiers.episodeTableViewCell) // MISCO CELL REUTILIZADA
+        tableView.register(RMEpisodeTableViewCell.self, forCellReuseIdentifier: CellIdentifiers.episodeTableViewCell) // MISCO CELL REUTILIZADA
         tableView.register(RMLoadingTableViewCell.self, forCellReuseIdentifier: CellIdentifiers.loadingTableViewCell)
     }
     
@@ -60,7 +60,7 @@ final class RMEpisodesTableViewDataSource: NSObject, UITableViewDataSource {
         switch section {
         case .episodesList:
             if let episode = self.viewModel.model.value?.episodes[indexPath.row],
-               let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.episodeTableViewCell, for: indexPath) as? RMCharacterDescriptionEpisodeCell {
+               let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.episodeTableViewCell, for: indexPath) as? RMEpisodeTableViewCell {
                 
                 cell.selectionStyle = .none
                 cell.configure(withSeason: episode.episode,

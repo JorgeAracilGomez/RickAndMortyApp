@@ -11,7 +11,7 @@ import UIKit
 
 extension RMCharacterDetailTableViewDatasource {
     enum CellIdentifiers {
-        static let episodeTableViewCell = "RMCharacterDescriptionEpisodeCell"
+        static let episodeTableViewCell = "RMEpisodeTableViewCell"
     }
 }
 
@@ -28,7 +28,7 @@ final class RMCharacterDetailTableViewDatasource: NSObject, UITableViewDataSourc
     }
     
     func registerCells() {
-        tableView.register(RMCharacterDescriptionEpisodeCell.self, forCellReuseIdentifier: CellIdentifiers.episodeTableViewCell)
+        tableView.register(RMEpisodeTableViewCell.self, forCellReuseIdentifier: CellIdentifiers.episodeTableViewCell)
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -41,7 +41,7 @@ final class RMCharacterDetailTableViewDatasource: NSObject, UITableViewDataSourc
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let episode = self.viewModel.model.value?.episodes[indexPath.row],
-           let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.episodeTableViewCell, for: indexPath) as? RMCharacterDescriptionEpisodeCell {
+           let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.episodeTableViewCell, for: indexPath) as? RMEpisodeTableViewCell {
             
             cell.selectionStyle = .none
             cell.configure(withSeason: episode.episode, withReleaseDate: episode.airDate, withEpisode: episode.name)

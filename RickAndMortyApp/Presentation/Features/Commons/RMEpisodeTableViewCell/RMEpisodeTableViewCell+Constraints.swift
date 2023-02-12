@@ -1,5 +1,5 @@
 //
-//  RMCharacterDescriptionEpisodeCell+Constraints.swift
+//  RMEpisodeTableViewCell+Constraints.swift
 //  RickAndMortyApp
 //
 //  Created by Jorge Aracil Gomez on 10/2/23.
@@ -7,9 +7,9 @@
 
 import UIKit
 
-// MARK: RMCharacterDescriptionEpisodeCell - Constraints
+// MARK: RMEpisodeTableViewCell - Constraints
 
-extension RMCharacterDescriptionEpisodeCell {
+extension RMEpisodeTableViewCell {
     
     private enum Constraints {
         static let shadowViewTop: CGFloat = 7

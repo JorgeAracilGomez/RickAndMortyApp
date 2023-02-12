@@ -1,5 +1,5 @@
 //
-//  RMCharacterDescriptionEpisodeCell.swift
+//  RMEpisodeTableViewCell.swift
 //  RickAndMortyApp
 //
 //  Created by Jorge Aracil Gomez on 10/2/23.
@@ -7,9 +7,9 @@
 
 import UIKit
 
-// MARK: RMCharacterDescriptionEpisodeCell
+// MARK: RMEpisodeTableViewCell
 
-final class RMCharacterDescriptionEpisodeCell: UITableViewCell {
+final class RMEpisodeTableViewCell: UITableViewCell {
     
     private var seasonTitle: String?
     private var releaseDate: String?
@@ -47,9 +47,9 @@ final class RMCharacterDescriptionEpisodeCell: UITableViewCell {
     }
 }
 
-// MARK: RMCharacterDescriptionEpisodeCell - Public Methods
+// MARK: RMEpisodeTableViewCell - Public Methods
 
-extension RMCharacterDescriptionEpisodeCell {
+extension RMEpisodeTableViewCell {
     
     func configure(withSeason season: String?,
                    withReleaseDate releaseDate: String?,
@@ -62,9 +62,9 @@ extension RMCharacterDescriptionEpisodeCell {
     }
 }
 
-// MARK: RMCharacterDescriptionEpisodeCell - Setup View
+// MARK: RMEpisodeTableViewCell - Setup View
 
-extension RMCharacterDescriptionEpisodeCell {
+extension RMEpisodeTableViewCell {
     
     private func setupView() {
         self.backgroundColor = .clear

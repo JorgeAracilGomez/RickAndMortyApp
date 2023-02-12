@@ -1,5 +1,5 @@
 //
-//  RMCharacterDescriptionEpisodeCell+Constants.swift
+//  RMEpisodeTableViewCell+Constants.swift
 //  RickAndMortyApp
 //
 //  Created by Jorge Aracil Gomez on 10/2/23.
@@ -7,9 +7,9 @@
 
 import UIKit
 
-// MARK: RMCharacterDescriptionEpisodeCell - Constants
+// MARK: RMEpisodeTableViewCell - Constants
 
-extension RMCharacterDescriptionEpisodeCell {
+extension RMEpisodeTableViewCell {
     
     enum Constants {
         static let shadowViewCornerRadius: CGFloat = 3

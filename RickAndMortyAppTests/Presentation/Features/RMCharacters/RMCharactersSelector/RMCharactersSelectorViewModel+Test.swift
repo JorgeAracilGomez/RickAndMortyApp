@@ -192,7 +192,7 @@ final class RMCharactersSelectorViewModelTest: XCTestCase {
     }
     
     func testFilterCharacters_UseCaseSucces() {
-        let expectation = expectation(description: "After the correct execution of viewDidLoad, when calling for first time the filterCharacters method we need to fetch a diferent 20 Characters that are obtained with the search filter and bind it again to the view controller, obtaining only 20 characters and a false value for Fetching Data Finished flag.") // MISCO
+        let expectation = expectation(description: "After the correct execution of viewDidLoad, when calling for first time the filterCharacters method we need to fetch a diferent 20 Characters that are obtained with the search filter and bind it again to the view controller, obtaining only 20 characters and a false value for Fetching Data Finished flag.")
 
         var viewDidLoadCalledFlag: Bool = false
         

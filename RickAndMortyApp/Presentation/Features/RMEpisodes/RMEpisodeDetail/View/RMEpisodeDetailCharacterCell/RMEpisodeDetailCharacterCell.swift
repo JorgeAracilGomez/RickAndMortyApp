@@ -102,7 +102,8 @@ extension RMEpisodeDetailCharacterCell {
         shadowView.addSubview(nameLabel)
         nameLabel.textAlignment = .left
         nameLabel.textColor = .black
-        nameLabel.font = Fonts.season
+        nameLabel.font = Fonts.name
+        nameLabel.numberOfLines = Constants.nameLabelMaxLines
         nameLabel.text = character?.name
         nameLabel.backgroundColor = .white
         setupNameLabelConstraints()

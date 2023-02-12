@@ -30,7 +30,7 @@ final class RMEpisodesTableViewDataSource: NSObject, UITableViewDataSource {
     }
     
     func registerCells() {
-        tableView.register(RMEpisodeTableViewCell.self, forCellReuseIdentifier: CellIdentifiers.episodeTableViewCell) // MISCO CELL REUTILIZADA
+        tableView.register(RMEpisodeTableViewCell.self, forCellReuseIdentifier: CellIdentifiers.episodeTableViewCell)
         tableView.register(RMLoadingTableViewCell.self, forCellReuseIdentifier: CellIdentifiers.loadingTableViewCell)
     }
     

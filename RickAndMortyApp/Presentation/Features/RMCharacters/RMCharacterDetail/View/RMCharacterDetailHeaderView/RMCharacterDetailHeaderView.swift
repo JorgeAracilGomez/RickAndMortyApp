@@ -90,6 +90,7 @@ extension RMCharacterDetailHeaderView {
         characterImageView.layer.cornerRadius = Constants.characterImageCornerRadius
         characterImageView.layer.borderColor = getStatusColor(for: model?.status).cgColor
         characterImageView.layer.masksToBounds = true
+        characterImageView.accessibilityIdentifier = AccessibilityIdentifiers.image
         
         if let imageKey = model?.imagePath {
             RMImageCacheMannager.shared.loadImage(forKey: imageKey, completion: { [weak self] imageData in
@@ -111,6 +112,7 @@ extension RMCharacterDetailHeaderView {
         statusLabel.textAlignment = .center
         statusLabel.layer.cornerRadius = Constants.statusLabelCornerRadius
         statusLabel.layer.masksToBounds = true
+        statusLabel.accessibilityIdentifier = AccessibilityIdentifiers.statusLabel
         setupStatusLabelConstraints()
     }
     

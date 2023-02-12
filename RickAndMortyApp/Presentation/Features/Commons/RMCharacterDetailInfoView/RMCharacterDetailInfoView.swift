@@ -99,12 +99,14 @@ extension RMCharacterDetailInfoView {
         titleLabel.font = Fonts.title
         titleLabel.text = title
         titleLabel.textAlignment = .center
+        titleLabel.accessibilityIdentifier = AccessibilityIdentifiers.title
         setupTitleLabelConstraints()
     }
     
     private func setupSeparatorView() {
         stackContainer.addArrangedSubview(separatorView)
         separatorView.backgroundColor = Colors.seperator
+        separatorView.accessibilityIdentifier = AccessibilityIdentifiers.separator
         setupSeparatorViewConstraints()
     }
     
@@ -114,6 +116,7 @@ extension RMCharacterDetailInfoView {
         descriptionLabel.font = Fonts.description
         descriptionLabel.text = description
         descriptionLabel.textAlignment = .center
+        descriptionLabel.accessibilityIdentifier = AccessibilityIdentifiers.description
         setupDescriptionLabelConstraints()
     }
     
@@ -124,6 +127,7 @@ extension RMCharacterDetailInfoView {
         secondaryDescriptionLabel.font = Fonts.description
         secondaryDescriptionLabel.text = secondaryDescription
         secondaryDescriptionLabel.textAlignment = .center
+        secondaryDescriptionLabel.accessibilityIdentifier = AccessibilityIdentifiers.secondaryDescription
         setupSecondaryDescriptionLabelConstraints()
     }
 }

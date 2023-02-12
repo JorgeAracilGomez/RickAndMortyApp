@@ -27,4 +27,11 @@ extension RMCharacterDetailInfoView {
         static let title = UIFont(name: "Helvetica-Bold", size: 12)
         static let description = UIFont(name: "Helvetica-Light", size: 16)
     }
+    
+    enum AccessibilityIdentifiers {
+        static let title = "RMCharacterDetailInfoViewTitle"
+        static let separator = "RMCharacterDetailInfoViewSeparator"
+        static let description = "RMCharacterDetailInfoViewDescription"
+        static let secondaryDescription = "RMCharacterDetailInfoViewSecondaryDescription"
+    }
 }

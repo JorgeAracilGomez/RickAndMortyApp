@@ -37,4 +37,9 @@ extension RMCharacterDetailHeaderView {
     enum Fonts {
         static let status = UIFont(name: "Helvetica-Bold", size: 16)
     }
+    
+    enum AccessibilityIdentifiers {
+        static let image = "RMCharacterDetailHeaderViewImage"
+        static let statusLabel = "RMCharacterDetailHeaderViewStatusLabel"
+    }
 }

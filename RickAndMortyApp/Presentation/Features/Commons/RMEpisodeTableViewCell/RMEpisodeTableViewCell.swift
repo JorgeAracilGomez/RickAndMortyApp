@@ -91,6 +91,7 @@ extension RMEpisodeTableViewCell {
         seasonLabel.textColor = .black
         seasonLabel.font = Fonts.season
         seasonLabel.text = seasonTitle
+        seasonLabel.accessibilityIdentifier = AccessibilityIdentifiers.season
         setupSeasonLabelConstraints()
     }
     
@@ -100,6 +101,7 @@ extension RMEpisodeTableViewCell {
         releaseDateLabel.textColor = .gray
         releaseDateLabel.font = Fonts.releaseDate
         releaseDateLabel.text = releaseDate
+        releaseDateLabel.accessibilityIdentifier = AccessibilityIdentifiers.released
         setupReleaseDateLabelConstraints()
     }
     
@@ -109,6 +111,7 @@ extension RMEpisodeTableViewCell {
         episodeLabel.textColor = .black
         episodeLabel.font = Fonts.episode
         episodeLabel.text = espisodeTitle
+        episodeLabel.accessibilityIdentifier = AccessibilityIdentifiers.title
         setupEpisodeLabelConstraints()
     }
 }

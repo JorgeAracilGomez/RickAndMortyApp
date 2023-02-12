@@ -59,6 +59,7 @@ extension RMCharacterCollectionViewCell {
     
     private func setupImageView() {
         addSubview(imageView)
+        imageView.accessibilityIdentifier = AccessibilityIdentifiers.image
         setupImageViewConstraints()
     }
     
@@ -77,6 +78,7 @@ extension RMCharacterCollectionViewCell {
         nameLabel.font = Fonts.nameLabel
         nameLabel.text = name
         nameLabel.backgroundColor = Colors.nameLabelBackground
+        nameLabel.accessibilityIdentifier = AccessibilityIdentifiers.name
         
         setupNameLabelConstraints()
     }

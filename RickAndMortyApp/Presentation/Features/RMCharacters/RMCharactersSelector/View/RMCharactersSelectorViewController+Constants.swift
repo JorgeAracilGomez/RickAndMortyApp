@@ -13,4 +13,7 @@ extension RMCharactersSelectorViewController {
         static let searchBarPlaceHolder = "SearchBarPlaceHolder"
     }
     
+    enum AccessibilityIdentifiers {
+        static let charactersCollectionView = "RMCharactersCollectionView"
+    }
 }

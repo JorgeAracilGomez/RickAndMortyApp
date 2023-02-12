@@ -23,4 +23,10 @@ extension RMEpisodeTableViewCell {
         static let releaseDate = UIFont(name: "Helvetica-LightOblique", size: 12)
         static let episode = UIFont(name: "Helvetica-Light", size: 16)
     }
+    
+    enum AccessibilityIdentifiers {
+        static let season = "RMEpisodeTableViewCellSeasonLabel"
+        static let released = "RMEpisodeTableViewCellReleasedLabel"
+        static let title = "RMEpisodeTableViewCellTitleLabel"
+    }
 }

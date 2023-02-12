@@ -111,6 +111,7 @@ extension RMCharactersSelectorViewController {
         charactersCollectionView.dataSource = charactersCollectionViewDataSource
         charactersCollectionView.delegate = charactersCollectionViewDelegate
         charactersCollectionView.backgroundColor = .systemGroupedBackground
+        charactersCollectionView.accessibilityIdentifier = AccessibilityIdentifiers.charactersCollectionView
         setupCharactersCollectionViewConstraints()
     }
 }

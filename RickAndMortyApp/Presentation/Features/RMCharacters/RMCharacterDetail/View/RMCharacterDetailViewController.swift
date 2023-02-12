@@ -107,6 +107,7 @@ extension RMCharacterDetailViewController {
         episodesTableView.separatorStyle = .none
         episodesTableView.dataSource = episodesTableViewDataSource
         episodesTableView.delegate = nil
+        episodesTableView.accessibilityIdentifier = AccessibilityIdentifiers.tableView
         setupEpisodesTableViewConstraints()
     }
 }

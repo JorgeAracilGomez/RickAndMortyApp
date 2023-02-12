@@ -22,4 +22,9 @@ extension RMCharacterCollectionViewCell {
     enum Fonts {
         static let nameLabel = UIFont(name: "Arial-BoldItalicMT", size: 20.0)
     }
+    
+    enum AccessibilityIdentifiers {
+        static let image = "RMCharacterCollectionViewCellImage"
+        static let name = "RMCharacterCollectionViewCellNameLabel"
+    }
 }

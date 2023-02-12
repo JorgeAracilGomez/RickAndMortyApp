@@ -16,10 +16,6 @@ struct RMEpisodesListDecodable: Codable {
         case results
     }
     
-    enum OnlyResultsKeys: String, CodingKey {
-        case results
-    }
-    
     init(from decoder: Decoder) throws {
         do {
             let values = try decoder.container(keyedBy: CodingKeys.self)

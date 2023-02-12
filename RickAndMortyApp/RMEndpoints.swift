@@ -24,6 +24,7 @@ struct RMEndpoints {
     /// characters Key Filters
     static let pageKey = "/?page=%d"
     static let nameKey = "?name=%@"
+    static let charactersKey = "/%@"
     static let locationsKey = "/%@"
     static let episodesKey = "/,%@"
 }
@@ -34,6 +35,7 @@ extension RMEndpoints {
     
     static func generateURLWithParams(for endpoint: RMEndpoint,
                                       searchFilter: String? = nil,
+                                      charactersFilter: [String]? = nil,
                                       locationsFilter: [String]? = nil,
                                       episodesFilter: [String]? = nil) -> String {
         
@@ -41,6 +43,11 @@ extension RMEndpoints {
         
         if let searchFilter = searchFilter {
             url += String(format: nameKey, searchFilter)
+        }
+        
+        if let charactersFilter = charactersFilter {
+            let characters = charactersFilter.joined(separator: ",")
+            url += String(format: charactersKey, characters)
         }
         
         if let locationsFilter = locationsFilter {

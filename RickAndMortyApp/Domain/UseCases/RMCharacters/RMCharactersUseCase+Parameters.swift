@@ -9,4 +9,5 @@ import Foundation
 
 struct RMCharactersUseCaseParameters {
     var searchFilter: String?
+    var charactersIDs: [String]?
 }

@@ -27,7 +27,7 @@ final class DefaultRMCharactersRepository: RMCharactersRepository {
     func getCharacters(params: RMCharactersRepositoryParameters,
                        completion: @escaping (Result<RMCharactersListDecodable, RMError>) -> Void) {
         
-        let endpoint = params.paginationUrl ?? RMEndpoints.generateURLWithParams(for: .character, searchFilter: params.searchFilter)
+        let endpoint = params.paginationUrl ?? RMEndpoints.generateURLWithParams(for: .character, searchFilter: params.searchFilter, charactersFilter: params.charactersIDs)
                 
         task?.cancel()
         

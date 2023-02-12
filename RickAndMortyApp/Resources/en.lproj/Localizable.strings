@@ -9,9 +9,11 @@
 //MARK: Characters Localizables
 
 "Characters_Navigation_Title" = "Characters";
+"Characters_status_Title" = "STATUS";
 "Characters_gender_Title" = "GENDER";
 "Characters_species_Title" = "SPECIES";
 "Characters_OriginLocation_Title" = "ORIGIN / LOCATION";
+"Characters_Featured_Title" = "Featured characters";
 
 //MARK: Episodes Localizables
 

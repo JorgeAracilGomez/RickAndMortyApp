@@ -10,4 +10,5 @@ import Foundation
 struct RMCharactersRepositoryParameters {
     var paginationUrl: String?
     var searchFilter: String?
+    var charactersIDs: [String]?
 }

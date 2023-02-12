@@ -56,7 +56,7 @@ extension DefaultRMCharactersUseCase {
             }
         }
         
-        let repositoryParams = RMCharactersRepositoryParameters(paginationUrl: paginationUrl, searchFilter: params.searchFilter)
+        let repositoryParams = RMCharactersRepositoryParameters(paginationUrl: paginationUrl, searchFilter: params.searchFilter, charactersIDs: params.charactersIDs)
         repository.getCharacters(params: repositoryParams, completion: completion)
     }
 }

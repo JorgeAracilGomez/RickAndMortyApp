@@ -38,7 +38,7 @@ extension RMEpisodesCoordinator {
     
     /// This method navigates to the episode detail screen.
     /// - Parameter model: Model that contains the information of the episodes for which you want to obtain the detail view.
-    func showEpisodeDetail(for model: RMCharacterEntity) {
+    func showEpisodeDetail(for model: RMEpisodeEntity) {
 //        let characterDetailViewController = RMCharacterDetailViewController(characterInputModel: model)
 //        characterDetailViewController.coordinator = self
 //        navigationController.pushViewController(characterDetailViewController, animated: true)

@@ -93,6 +93,7 @@
 		962C8B572999099F004E7FFF /* RMEpisodeDetailViewController+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962C8B562999099F004E7FFF /* RMEpisodeDetailViewController+Constraints.swift */; };
 		962C8B592999138E004E7FFF /* RMEpisodeDetailHeaderView+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962C8B582999138E004E7FFF /* RMEpisodeDetailHeaderView+Constants.swift */; };
 		962C8B5B299913A5004E7FFF /* RMEpisodeDetailHeaderView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962C8B5A299913A5004E7FFF /* RMEpisodeDetailHeaderView+Constraints.swift */; };
+		962C8B642999551A004E7FFF /* RMEpisodesSelectorViewModel+Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962C8B632999551A004E7FFF /* RMEpisodesSelectorViewModel+Test.swift */; };
 		96A2FA76298D250500676FA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A2FA75298D250500676FA5 /* AppDelegate.swift */; };
 		96A2FA78298D250500676FA5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A2FA77298D250500676FA5 /* SceneDelegate.swift */; };
 		96A2FA7F298D250600676FA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96A2FA7E298D250600676FA5 /* Assets.xcassets */; };
@@ -243,6 +244,7 @@
 		962C8B562999099F004E7FFF /* RMEpisodeDetailViewController+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RMEpisodeDetailViewController+Constraints.swift"; sourceTree = "<group>"; };
 		962C8B582999138E004E7FFF /* RMEpisodeDetailHeaderView+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RMEpisodeDetailHeaderView+Constants.swift"; sourceTree = "<group>"; };
 		962C8B5A299913A5004E7FFF /* RMEpisodeDetailHeaderView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RMEpisodeDetailHeaderView+Constraints.swift"; sourceTree = "<group>"; };
+		962C8B632999551A004E7FFF /* RMEpisodesSelectorViewModel+Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RMEpisodesSelectorViewModel+Test.swift"; sourceTree = "<group>"; };
 		96A2FA72298D250500676FA5 /* RickAndMortyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickAndMortyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96A2FA75298D250500676FA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96A2FA77298D250500676FA5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -570,6 +572,7 @@
 		962C8B0A29979D4C004E7FFF /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				962C8B60299954D7004E7FFF /* Features */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -746,6 +749,30 @@
 				961999432993D55B00F956D4 /* Localizable.strings */,
 			);
 			path = Localizables;
+			sourceTree = "<group>";
+		};
+		962C8B60299954D7004E7FFF /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				962C8B61299954FC004E7FFF /* RMEpisodes */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		962C8B61299954FC004E7FFF /* RMEpisodes */ = {
+			isa = PBXGroup;
+			children = (
+				962C8B6229995506004E7FFF /* RMEpisodesSelector */,
+			);
+			path = RMEpisodes;
+			sourceTree = "<group>";
+		};
+		962C8B6229995506004E7FFF /* RMEpisodesSelector */ = {
+			isa = PBXGroup;
+			children = (
+				962C8B632999551A004E7FFF /* RMEpisodesSelectorViewModel+Test.swift */,
+			);
+			path = RMEpisodesSelector;
 			sourceTree = "<group>";
 		};
 		96A2FA69298D250500676FA5 = {
@@ -1306,6 +1333,7 @@
 				962C8B1C2997B9EE004E7FFF /* RMLocationsUseCase+Test.swift in Sources */,
 				962C8B182997B8CF004E7FFF /* RMLocationsRepositorySuccess+Mock.swift in Sources */,
 				962C8B1A2997B8DB004E7FFF /* RMLocationsRepositoryFailure+Mock.swift in Sources */,
+				962C8B642999551A004E7FFF /* RMEpisodesSelectorViewModel+Test.swift in Sources */,
 				962C8B142997AC41004E7FFF /* RMCharactersRepositoryFailure+Mock.swift in Sources */,
 				962C8B242997C13A004E7FFF /* RMEpisodesRepositoryFailure+Mock.swift in Sources */,
 				962C8B202997C0D8004E7FFF /* RMEpisodesList+Mock.swift in Sources */,

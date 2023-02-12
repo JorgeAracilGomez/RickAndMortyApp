@@ -723,6 +723,31 @@
 			path = Commons;
 			sourceTree = "<group>";
 		};
+		962C8B5D299953C5004E7FFF /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				96199918298DB2DE00F956D4 /* 98770-assistagro-loading-bars.json */,
+				96199926299172A900F956D4 /* 39138-morty-cry-loader.json */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		962C8B5E299953D5004E7FFF /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				9619992A29917D3300F956D4 /* shlop_rg.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		962C8B5F299953E6004E7FFF /* Localizables */ = {
+			isa = PBXGroup;
+			children = (
+				961999432993D55B00F956D4 /* Localizable.strings */,
+			);
+			path = Localizables;
+			sourceTree = "<group>";
+		};
 		96A2FA69298D250500676FA5 = {
 			isa = PBXGroup;
 			children = (
@@ -840,10 +865,9 @@
 		96A2FABB298D731700676FA5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				9619992A29917D3300F956D4 /* shlop_rg.otf */,
-				96199918298DB2DE00F956D4 /* 98770-assistagro-loading-bars.json */,
-				96199926299172A900F956D4 /* 39138-morty-cry-loader.json */,
-				961999432993D55B00F956D4 /* Localizable.strings */,
+				962C8B5F299953E6004E7FFF /* Localizables */,
+				962C8B5D299953C5004E7FFF /* Animations */,
+				962C8B5E299953D5004E7FFF /* Fonts */,
 				96A2FA7E298D250600676FA5 /* Assets.xcassets */,
 				96A2FA80298D250600676FA5 /* LaunchScreen.storyboard */,
 			);

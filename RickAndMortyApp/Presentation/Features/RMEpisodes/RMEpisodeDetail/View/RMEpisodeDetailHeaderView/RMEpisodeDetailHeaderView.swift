@@ -19,10 +19,22 @@ final class RMEpisodeDetailHeaderView: UIView {
         return shadowView
     }()
     
-    private (set) var titleLabel: UILabel = {
-        let titleLabel = UILabel(frame: .zero)
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        return titleLabel
+    private (set) var seasonLabel: UILabel = {
+        let seasonLabel = UILabel(frame: .zero)
+        seasonLabel.translatesAutoresizingMaskIntoConstraints = false
+        return seasonLabel
+    }()
+    
+    private (set) var episodeLabel: UILabel = {
+        let episodeLabel = UILabel(frame: .zero)
+        episodeLabel.translatesAutoresizingMaskIntoConstraints = false
+        return episodeLabel
+    }()
+    
+    private (set) var releasedLabel: UILabel = {
+        let releasedLabel = UILabel(frame: .zero)
+        releasedLabel.translatesAutoresizingMaskIntoConstraints = false
+        return releasedLabel
     }()
 }
 
@@ -42,7 +54,9 @@ extension RMEpisodeDetailHeaderView {
     
     private func setupView() {
         setupShadowView()
-        setuptitleLabel()
+        setupSeasonLabel()
+        setupEpisodeLabel()
+        setupReleasedLabel()
     }
     
     private func setupShadowView() {
@@ -56,81 +70,36 @@ extension RMEpisodeDetailHeaderView {
         setupShadowViewConstraints()
     }
         
-    private func setuptitleLabel() {
-        shadowView.addSubview(titleLabel)
-//        titleLabel.font = Fonts.status // MISCO
-        titleLabel.text = model?.name
-        titleLabel.textAlignment = .center
-        setuptitleLabelConstraints()
-    }
-}
-
-
-
-
-
-
-// MISCO
-
-import UIKit
-
-// MARK: RMEpisodeDetailHeaderView - Constants
-
-extension RMEpisodeDetailHeaderView {
- 
-    enum Constants {
-        static let shadowViewCornerRadius: CGFloat = 3
-        static let shadowViewOffset = CGSize(width: 0, height: 1.75)
-        static let shadowViewRadius: CGFloat = 1
-        static let shadowViewOpacity: Float = 0.45
+    private func setupSeasonLabel() {
+        shadowView.addSubview(seasonLabel)
+        seasonLabel.textAlignment = .left
+        seasonLabel.textColor = .darkGray
+        seasonLabel.font = Fonts.primary
+        if let season = model?.season {
+            seasonLabel.text = String(format: Localizables.seasonInfo.localized, season)
+        }
+        setupSeasonLabelConstraints()
     }
     
-    enum Fonts {
-        static let status = UIFont(name: "Helvetica-Bold", size: 16)
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-// MISCO
-
-import UIKit
-
-// MARK: RMEpisodeDetailHeaderView - Constraints
-
-extension RMEpisodeDetailHeaderView {
-    
-    private enum Constraints {
-        static let shadowViewBotom: CGFloat = 3.0
-        static let titleLabelTop: CGFloat = 20
-        static let titleLabelLeading: CGFloat = 20
-        static let titleLabelTrailing: CGFloat = 20
+    private func setupEpisodeLabel() {
+        shadowView.addSubview(episodeLabel)
+        episodeLabel.textAlignment = .left
+        episodeLabel.textColor = .darkGray
+        episodeLabel.font = Fonts.primary
+        if let episode = model?.episode {
+            episodeLabel.text = String(format: Localizables.episodeInfo.localized, episode)
+        }
+        setupEpisodeLabelConstraints()
     }
     
-    func setupShadowViewConstraints() {
-        NSLayoutConstraint.activate([
-            shadowView.topAnchor.constraint(equalTo: topAnchor),
-            shadowView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            shadowView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            shadowView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -Constraints.shadowViewBotom),
-        ])
-    }
-    
-    func setuptitleLabelConstraints() {
-        NSLayoutConstraint.activate([
-            titleLabel.topAnchor.constraint(equalTo: shadowView.topAnchor, constant: Constraints.titleLabelTop),
-            titleLabel.leadingAnchor.constraint(equalTo: shadowView.leadingAnchor, constant: Constraints.titleLabelLeading),
-            titleLabel.trailingAnchor.constraint(equalTo: shadowView.trailingAnchor, constant: -Constraints.titleLabelTrailing),
-            titleLabel.bottomAnchor.constraint(equalTo: shadowView.bottomAnchor)
-        ])
+    private func setupReleasedLabel() {
+        shadowView.addSubview(releasedLabel)
+        releasedLabel.textAlignment = .left
+        releasedLabel.textColor = .darkGray
+        releasedLabel.font = Fonts.primary
+        if let airDate = model?.airDate {
+            releasedLabel.text = String(format: Localizables.releasedInfo.localized, airDate)
+        }
+        setupReleasedLabelConstraints()
     }
 }

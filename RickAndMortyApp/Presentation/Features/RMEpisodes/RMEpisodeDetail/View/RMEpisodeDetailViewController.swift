@@ -91,7 +91,8 @@ extension RMEpisodeDetailViewController {
         setupCharactersTableView()
     }
     private func setupNavigationTitle() {
-        self.title = episodeInputModel.episode
+        self.title = episodeInputModel.name
+        navigationItem.setValue(1, forKey: "__largeTitleTwoLineMode")
     }
     
     private func setupEpisodeHeaderView() {

@@ -70,14 +70,19 @@ extension DefaultRMEpisodeDetailViewModel {
  
     func createModel(with entity: RMCharactersListEntity) {
         guard let name = inputModel?.name,
+              let episodeValues = inputModel?.episode?.dropFirst().split(separator: "E").map(String.init),
+              let season = episodeValues.first,
+              let episode = episodeValues.last,
               let airDate = inputModel?.airDate,
               let characters = entity.results else {
 
             self.error.value = RMError.unknownError(message: "Could not get detail model in RMEpisodeDetailViewModel")
             return
         }
-
+        
         self.model.value = RMEpisodeDetailModel(name: name,
+                                                season: Int(season),
+                                                episode: Int(episode),
                                                 airDate: airDate,
                                                 characters: characters)
     }

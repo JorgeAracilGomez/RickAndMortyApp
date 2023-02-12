@@ -9,6 +9,8 @@ import Foundation
 
 struct RMEpisodeDetailModel {
     var name: String?
+    var season: Int?
+    var episode: Int?
     var airDate: String?
     var characters: [RMCharacterEntity]
 }

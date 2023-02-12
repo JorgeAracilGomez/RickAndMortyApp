@@ -91,6 +91,8 @@
 		962C8B532998F554004E7FFF /* RMEpisodeDetailCharacterCell+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962C8B522998F554004E7FFF /* RMEpisodeDetailCharacterCell+Constants.swift */; };
 		962C8B552998F55E004E7FFF /* RMEpisodeDetailCharacterCell+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962C8B542998F55E004E7FFF /* RMEpisodeDetailCharacterCell+Constraints.swift */; };
 		962C8B572999099F004E7FFF /* RMEpisodeDetailViewController+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962C8B562999099F004E7FFF /* RMEpisodeDetailViewController+Constraints.swift */; };
+		962C8B592999138E004E7FFF /* RMEpisodeDetailHeaderView+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962C8B582999138E004E7FFF /* RMEpisodeDetailHeaderView+Constants.swift */; };
+		962C8B5B299913A5004E7FFF /* RMEpisodeDetailHeaderView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962C8B5A299913A5004E7FFF /* RMEpisodeDetailHeaderView+Constraints.swift */; };
 		96A2FA76298D250500676FA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A2FA75298D250500676FA5 /* AppDelegate.swift */; };
 		96A2FA78298D250500676FA5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A2FA77298D250500676FA5 /* SceneDelegate.swift */; };
 		96A2FA7F298D250600676FA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96A2FA7E298D250600676FA5 /* Assets.xcassets */; };
@@ -239,6 +241,8 @@
 		962C8B522998F554004E7FFF /* RMEpisodeDetailCharacterCell+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RMEpisodeDetailCharacterCell+Constants.swift"; sourceTree = "<group>"; };
 		962C8B542998F55E004E7FFF /* RMEpisodeDetailCharacterCell+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RMEpisodeDetailCharacterCell+Constraints.swift"; sourceTree = "<group>"; };
 		962C8B562999099F004E7FFF /* RMEpisodeDetailViewController+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RMEpisodeDetailViewController+Constraints.swift"; sourceTree = "<group>"; };
+		962C8B582999138E004E7FFF /* RMEpisodeDetailHeaderView+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RMEpisodeDetailHeaderView+Constants.swift"; sourceTree = "<group>"; };
+		962C8B5A299913A5004E7FFF /* RMEpisodeDetailHeaderView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RMEpisodeDetailHeaderView+Constraints.swift"; sourceTree = "<group>"; };
 		96A2FA72298D250500676FA5 /* RickAndMortyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickAndMortyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96A2FA75298D250500676FA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96A2FA77298D250500676FA5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -694,6 +698,8 @@
 			isa = PBXGroup;
 			children = (
 				962C8B4A2998ECCA004E7FFF /* RMEpisodeDetailHeaderView.swift */,
+				962C8B582999138E004E7FFF /* RMEpisodeDetailHeaderView+Constants.swift */,
+				962C8B5A299913A5004E7FFF /* RMEpisodeDetailHeaderView+Constraints.swift */,
 			);
 			path = RMEpisodeDetailHeaderView;
 			sourceTree = "<group>";
@@ -1216,10 +1222,12 @@
 				96A2FAE3298D861E00676FA5 /* RMCharactersUseCase.swift in Sources */,
 				961999462993D63900F956D4 /* String+Localized.swift in Sources */,
 				961999532993D99900F956D4 /* RMSpinnerViewController+Constants.swift in Sources */,
+				962C8B592999138E004E7FFF /* RMEpisodeDetailHeaderView+Constants.swift in Sources */,
 				962C8AF52996A323004E7FFF /* RMCharacterDescriptionEpisodeCell+Constants.swift in Sources */,
 				962C8AD029956A93004E7FFF /* UIView+SafeArea.swift in Sources */,
 				961999492993D79B00F956D4 /* RMCharactersSelectorViewController+Constants.swift in Sources */,
 				962C8B382998D784004E7FFF /* RMEpisodesSelectorViewController+TableViewDatasource.swift in Sources */,
+				962C8B5B299913A5004E7FFF /* RMEpisodeDetailHeaderView+Constraints.swift in Sources */,
 				962C8AD229956AC0004E7FFF /* RMCharacterDetailHeaderView+Constants.swift in Sources */,
 				96A2FACA298D7B7C00676FA5 /* RMCharacter+Decodable.swift in Sources */,
 				96A2FB05298D99BB00676FA5 /* Boxing.swift in Sources */,

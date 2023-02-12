@@ -19,6 +19,9 @@
 
 "Episodes_Navigation_Title" = "Episodes";
 "Episodes_Featured_Title" = "Featured episodes";
+"Episodes_Detail_Season" = "SEASON: %d";
+"Episodes_Detail_Episode" = "EPISODE: %d";
+"Episodes_Detail_Released" = "RELEASED: %@";
 
 // MARK: Common Localizables
 

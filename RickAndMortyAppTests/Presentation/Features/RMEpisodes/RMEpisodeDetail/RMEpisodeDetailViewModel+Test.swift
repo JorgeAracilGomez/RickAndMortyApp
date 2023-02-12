@@ -80,13 +80,16 @@ final class RMEpisodeDetailViewModelTest: XCTestCase {
     
     func testViewDidLoad_UseCaseFailure() {
         let expectation = expectation(description: "After the execution error of the UseCase, an error should be received and it should not be null")
-
-        // MISCO FALTA EL MODEL
         
         failureViewModel?.error.bind { error in
             guard let error = error else { return }
             XCTAssertNotNil(error)
             expectation.fulfill()
+        }
+        
+        successViewModel?.model.bind { model in
+            guard let _ = model else { return }
+            XCTFail("Failure test must not have a model binding when the usecase is executed")
         }
 
         failureViewModel?.viewDidLoad(forInputModel: RMEpisodeEntity(decodable: RMEpisodeDecodable()))

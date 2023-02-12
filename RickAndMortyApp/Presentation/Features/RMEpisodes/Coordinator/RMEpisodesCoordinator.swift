@@ -31,6 +31,7 @@ extension RMEpisodesCoordinator {
         let episodesSelectionViewController = RMEpisodesSelectorViewController()
         episodesSelectionViewController.coordinator = self
         episodesSelectionViewController.title = "Episodes_Navigation_Title".localized
+        episodesSelectionViewController.tabBarItem = UITabBarItem(title: "Episodes_Navigation_Title".localized, image: UIImage(systemName: "play.tv")?.withRenderingMode(.automatic), tag: 1)
         navigationController.navigationBar.prefersLargeTitles = true
         navigationController.pushViewController(episodesSelectionViewController, animated: false)
     }

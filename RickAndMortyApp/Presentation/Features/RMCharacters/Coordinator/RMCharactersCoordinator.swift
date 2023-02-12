@@ -31,6 +31,7 @@ extension RMCharactersCoordinator {
         let characterSelectionViewController = RMCharactersSelectorViewController()
         characterSelectionViewController.coordinator = self
         characterSelectionViewController.title = "Characters_Navigation_Title".localized
+        characterSelectionViewController.tabBarItem = UITabBarItem(title: "Characters_Navigation_Title".localized, image: UIImage(systemName: "person.3")?.withRenderingMode(.automatic), tag: 0)
         navigationController.navigationBar.prefersLargeTitles = true
         navigationController.pushViewController(characterSelectionViewController, animated: false)
     }

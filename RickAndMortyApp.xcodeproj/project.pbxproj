@@ -319,7 +319,7 @@
 		9619993C2993AE9000F956D4 /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				96A2FAAE298D3F3800676FA5 /* RMHomeTabBarViewController.swift */,
+				962C8B29299866DA004E7FFF /* RMHome */,
 				96A2FAB4298D724000676FA5 /* RMCharacters */,
 				96A2FAB5298D725100676FA5 /* RMEpisodes */,
 			);
@@ -559,6 +559,14 @@
 				962C8B1F2997C0D8004E7FFF /* RMEpisodesList+Mock.swift */,
 			);
 			path = RawData;
+			sourceTree = "<group>";
+		};
+		962C8B29299866DA004E7FFF /* RMHome */ = {
+			isa = PBXGroup;
+			children = (
+				96A2FAAE298D3F3800676FA5 /* RMHomeTabBarViewController.swift */,
+			);
+			path = RMHome;
 			sourceTree = "<group>";
 		};
 		96A2FA69298D250500676FA5 = {

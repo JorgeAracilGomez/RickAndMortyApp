@@ -22,7 +22,6 @@ final class RMCharactersCollectionViewDataSource: NSObject, UICollectionViewData
     
     var collectionView: UICollectionView
     var viewModel: RMCharactersSelectorViewModel
-    let pageLimit: Int = 20
     var isFetchDataFinished: Bool = false
     
     init(collectionView: UICollectionView, viewModel: RMCharactersSelectorViewModel) {
@@ -48,7 +47,7 @@ final class RMCharactersCollectionViewDataSource: NSObject, UICollectionViewData
         case .charactersList:
             return charactersCount
         case .loader:
-            return charactersCount >= pageLimit ? 1 : 0
+            return 1
         }
     }
     

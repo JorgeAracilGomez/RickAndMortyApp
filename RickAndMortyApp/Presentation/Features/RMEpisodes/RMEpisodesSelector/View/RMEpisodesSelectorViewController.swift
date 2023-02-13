@@ -98,6 +98,7 @@ extension RMEpisodesSelectorViewController {
         episodesTableView.dataSource = episodesTableViewDataSource
         episodesTableView.delegate = episodesTableViewDelegate
         episodesTableView.backgroundColor = .systemGroupedBackground
+        episodesTableView.accessibilityIdentifier = AccessibilityIdentifiers.tableView
         setupEpisodesTableViewConstraints()
     }
 }

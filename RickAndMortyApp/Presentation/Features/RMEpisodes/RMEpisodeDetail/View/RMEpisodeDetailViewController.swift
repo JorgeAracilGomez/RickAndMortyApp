@@ -106,6 +106,7 @@ extension RMEpisodeDetailViewController {
         charactersTableView.separatorStyle = .none
         charactersTableView.dataSource = charactersTableViewDataSource
         charactersTableView.delegate = nil
+        charactersTableView.accessibilityIdentifier = AccessibilityIdentifiers.tableView
         setupCharactersTableViewConstraints()
     }
 }

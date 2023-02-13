@@ -31,4 +31,9 @@ extension RMEpisodeDetailCharacterCell {
         static let species = "Characters_species_Title"
         static let unknown = "unknown"
     }
+    
+    enum AccessibilityIdentifiers {
+        static let image = "RMEpisodeDetailCharacterCellImage"
+        static let nameLabel = "RMEpisodeDetailCharacterCellNameLabel"
+    }
 }

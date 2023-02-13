@@ -78,6 +78,7 @@ extension RMEpisodeDetailHeaderView {
         if let season = model?.season {
             seasonLabel.text = String(format: Localizables.seasonInfo.localized, season)
         }
+        seasonLabel.accessibilityIdentifier = AccessibilityIdentifiers.seasonLabel
         setupSeasonLabelConstraints()
     }
     
@@ -89,6 +90,7 @@ extension RMEpisodeDetailHeaderView {
         if let episode = model?.episode {
             episodeLabel.text = String(format: Localizables.episodeInfo.localized, episode)
         }
+        episodeLabel.accessibilityIdentifier = AccessibilityIdentifiers.episodeLabel
         setupEpisodeLabelConstraints()
     }
     
@@ -100,6 +102,7 @@ extension RMEpisodeDetailHeaderView {
         if let airDate = model?.airDate {
             releasedLabel.text = String(format: Localizables.releasedInfo.localized, airDate)
         }
+        releasedLabel.accessibilityIdentifier = AccessibilityIdentifiers.releasedLabel
         setupReleasedLabelConstraints()
     }
 }

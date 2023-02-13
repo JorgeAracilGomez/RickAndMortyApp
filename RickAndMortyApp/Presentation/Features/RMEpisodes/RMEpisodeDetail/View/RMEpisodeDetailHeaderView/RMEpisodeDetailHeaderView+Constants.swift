@@ -27,4 +27,10 @@ extension RMEpisodeDetailHeaderView {
     enum Fonts {
         static let primary = UIFont.systemFont(ofSize: 20, weight: UIFont.Weight.bold)
     }
+    
+    enum AccessibilityIdentifiers {
+        static let seasonLabel = "RMEpisodeDetailHeaderViewSeasonLabel"
+        static let episodeLabel = "RMEpisodeDetailHeaderViewEpisodeLabel"
+        static let releasedLabel = "RMEpisodeDetailHeaderViewReleasedLabel"
+    }
 }

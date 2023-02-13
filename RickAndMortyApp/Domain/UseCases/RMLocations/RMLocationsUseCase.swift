@@ -17,7 +17,7 @@ protocol RMLocationsUseCase {
                  completion: @escaping (Result<RMLocationsListEntity, RMError>) -> Void)
 }
 
-// MARK: DefaultGNBProductTransactionsUseCase
+// MARK: DefaultRMLocationsUseCase
 
 final class DefaultRMLocationsUseCase: RMLocationsUseCase {
     

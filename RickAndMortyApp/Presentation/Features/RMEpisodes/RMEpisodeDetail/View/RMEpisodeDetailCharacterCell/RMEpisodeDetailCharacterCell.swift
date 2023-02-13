@@ -106,6 +106,7 @@ extension RMEpisodeDetailCharacterCell {
         nameLabel.numberOfLines = Constants.nameLabelMaxLines
         nameLabel.text = character?.name
         nameLabel.backgroundColor = .white
+        nameLabel.accessibilityIdentifier = AccessibilityIdentifiers.nameLabel
         setupNameLabelConstraints()
     }
     
@@ -119,6 +120,7 @@ extension RMEpisodeDetailCharacterCell {
                 self?.showImageLoaded(image)
             })
         }
+        characterImage.accessibilityIdentifier = AccessibilityIdentifiers.image
         setupImageViewConstraints()
     }
     

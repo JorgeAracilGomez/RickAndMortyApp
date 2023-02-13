@@ -12,6 +12,6 @@ import Foundation
 extension RMCharacterDetailViewController {
     
     enum AccessibilityIdentifiers {
-        static let tableView = "GNBCharacterDetailTableView"
+        static let tableView = "RMCharacterDetailTableView"
     }
 }

@@ -76,7 +76,7 @@ final class RMCharactersHappyPathUITest: XCTestCase {
         XCTAssertEqual(characterDetailInfoViewDescriptionLabelsCount, 3)
         XCTAssertEqual(characterDetailInfoViewSecondaryDescriptionLabelsCount, 1)
         
-        let characterDetailTable = app.tables["GNBCharacterDetailTableView"]
+        let characterDetailTable = app.tables["RMCharacterDetailTableView"]
         let numberOfCellsInCharacterDetailTableView = characterDetailTable.cells.count
         let numberOfSeasonLabelInCharacterDetailCells = app.staticTexts.matching(identifier: "RMEpisodeTableViewCellSeasonLabel").count
         let numberOfReleasedLabelInCharacterDetailCells = app.staticTexts.matching(identifier: "RMEpisodeTableViewCellReleasedLabel").count

@@ -12,6 +12,7 @@ Having an example project, for reference.
  - Testability
  - Code Organization
  - Code Reusability
+ - Characters Search
  - Images Cache
 
  

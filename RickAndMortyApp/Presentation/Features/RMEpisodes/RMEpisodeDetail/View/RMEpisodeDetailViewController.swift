@@ -7,6 +7,8 @@
 
 import UIKit
 
+// MARK: RMEpisodeDetailViewController
+
 final class RMEpisodeDetailViewController: RMBaseViewController {
 
     var coordinator: RMEpisodesCoordinator?

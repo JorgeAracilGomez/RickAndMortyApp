@@ -7,9 +7,11 @@
 
 import Foundation
 
+// MARK: RMCharactersSelectorViewModel
+
 protocol RMCharactersSelectorViewModel: RMCharactersSelectorViewModelInput, RMCharactersSelectorViewModelOutput {}
 
-
+/// This protocol defines the input methods that the ViewModel accepts for communication between the View-ViewModel.
 protocol RMCharactersSelectorViewModelInput {
     func viewDidLoad()
     func fetchNewCharacters()
@@ -17,12 +19,15 @@ protocol RMCharactersSelectorViewModelInput {
     func selectCell(atIndex index: Int)
 }
 
+/// This protocol defines the output getter Box variables that the ViewModel uses for communication between the ViewModel-View.
 protocol RMCharactersSelectorViewModelOutput {
     var loadingStatus: Box<RMLoadingStatus?> { get }
     var model: Box<RMCharactersSelectorModel?> { get }
     var showEmptyStateError: Box<Bool?> { get }
     var characterDetailModel: Box<RMCharacterEntity?> { get }
 }
+
+// MARK: DefaultRMCharactersSelectorViewModel
 
 final class DefaultRMCharactersSelectorViewModel: RMCharactersSelectorViewModel {
     var loadingStatus: Box<RMLoadingStatus?> = Box(nil)
@@ -36,7 +41,7 @@ final class DefaultRMCharactersSelectorViewModel: RMCharactersSelectorViewModel 
     }
 }
 
-// MARK: ViewModel Input Methods
+// MARK: Input Methods
 
 extension DefaultRMCharactersSelectorViewModel {
     
@@ -80,10 +85,12 @@ extension DefaultRMCharactersSelectorViewModel {
     }
 }
 
-// MARK: Create Models
+// MARK: Mannage Output Models
 
 extension DefaultRMCharactersSelectorViewModel {
- 
+    
+    /// This method inflates a model of the view for data binding with the viewController
+    /// - Parameter entity: Entity model result of the Characters request.
     func createModel(for entity: RMCharactersListEntity) {
         guard let newCharacters = entity.results else {
             let error = RMError.unknownError(message: "Could not get list of characters in RMCharactersSelectorViewModel")
@@ -98,6 +105,8 @@ extension DefaultRMCharactersSelectorViewModel {
                                                      isFetchDataFinished: isFetchDataFinished)
     }
     
+    /// This method inflates an error model for data binding with the viewController
+    /// - Parameter error: Value of the error occurred
     func createEmptyStateModel(forError: RMError) {
         self.model.value = RMCharactersSelectorModel(characters: [], isFetchDataFinished: true)
         self.showEmptyStateError.value = true

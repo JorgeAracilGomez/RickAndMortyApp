@@ -7,17 +7,23 @@
 
 import Foundation
 
+// MARK: RMEpisodeDetailViewModel
+
 protocol RMEpisodeDetailViewModel: RMEpisodeDetailViewModelInput, RMEpisodeDetailViewModelOutput {}
 
+/// This protocol defines the input methods that the ViewModel accepts for communication between the View-ViewModel.
 protocol RMEpisodeDetailViewModelInput {
     func viewDidLoad(forInputModel model: RMEpisodeEntity)
 }
 
+/// This protocol defines the output getter Box variables that the ViewModel uses for communication between the ViewModel-View.
 protocol RMEpisodeDetailViewModelOutput {
     var loadingStatus: Box<RMLoadingStatus?> { get }
     var model: Box<RMEpisodeDetailModel?> { get }
     var error: Box<RMError?> { get }
 }
+
+// MARK: DefaultRMEpisodeDetailViewModel
 
 final class DefaultRMEpisodeDetailViewModel: RMEpisodeDetailViewModel {
     var inputModel: RMEpisodeEntity?
@@ -31,7 +37,7 @@ final class DefaultRMEpisodeDetailViewModel: RMEpisodeDetailViewModel {
     }
 }
 
-// MARK: ViewModel Input Methods
+// MARK: Input Methods
 
 extension DefaultRMEpisodeDetailViewModel {
     
@@ -68,6 +74,8 @@ extension DefaultRMEpisodeDetailViewModel {
 
 extension DefaultRMEpisodeDetailViewModel {
  
+    /// This method inflates a model of the view for data binding with the viewController
+    /// - Parameter entity: Entity model result of the Characters request.
     func createModel(with entity: RMCharactersListEntity) {
         guard let name = inputModel?.name,
               let episodeValues = inputModel?.episode?.dropFirst().split(separator: "E").map(String.init),
@@ -87,6 +95,8 @@ extension DefaultRMEpisodeDetailViewModel {
                                                 characters: characters)
     }
 
+    /// This method inflates an error model for data binding with the viewController
+    /// - Parameter error: Value of the error occurred
     func createErrorModel(_ error: RMError) {
         self.error.value = error
     }

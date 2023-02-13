@@ -7,6 +7,8 @@
 
 import UIKit
 
+// MARK: RMCharactersSelectorViewController - SearchBarDelegate
+
 extension RMCharactersSelectorViewController: UISearchResultsUpdating, UISearchBarDelegate {
     
     func updateSearchResults(for searchController: UISearchController) {

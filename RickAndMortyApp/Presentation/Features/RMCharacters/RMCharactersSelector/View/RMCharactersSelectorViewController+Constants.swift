@@ -7,6 +7,8 @@
 
 import Foundation
 
+// MARK: RMCharactersSelectorViewController - Constants
+
 extension RMCharactersSelectorViewController {
     
     enum Localizables {

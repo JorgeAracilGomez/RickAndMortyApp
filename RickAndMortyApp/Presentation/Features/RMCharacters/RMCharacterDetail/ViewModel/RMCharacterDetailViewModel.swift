@@ -7,17 +7,23 @@
 
 import Foundation
 
+// MARK: RMCharacterDetailViewModel
+
 protocol RMCharacterDetailViewModel: RMCharacterDetailViewModelInput, RMCharacterDetailViewModelOutput {}
 
+/// This protocol defines the input methods that the ViewModel accepts for communication between the View-ViewModel.
 protocol RMCharacterDetailViewModelInput {
     func viewDidLoad(forInputModel model: RMCharacterEntity)
 }
 
+/// This protocol defines the output getter Box variables that the ViewModel uses for communication between the ViewModel-View.
 protocol RMCharacterDetailViewModelOutput {
     var loadingStatus: Box<RMLoadingStatus?> { get }
     var model: Box<RMCharacterDetailModel?> { get }
     var error: Box<RMError?> { get }
 }
+
+// MARK: DefaultRMCharacterDetailViewModel
 
 final class DefaultRMCharacterDetailViewModel: RMCharacterDetailViewModel {
     var inputModel: RMCharacterEntity?
@@ -31,7 +37,7 @@ final class DefaultRMCharacterDetailViewModel: RMCharacterDetailViewModel {
     }
 }
 
-// MARK: ViewModel Input Methods
+// MARK: Input Methods
 
 extension DefaultRMCharacterDetailViewModel {
     
@@ -69,7 +75,11 @@ extension DefaultRMCharacterDetailViewModel {
 // MARK: Create Models
 
 extension DefaultRMCharacterDetailViewModel {
- 
+   
+    /// This method inflates a model of the view for data binding with the viewController
+    /// - Parameters:
+    ///   - entity: Entity model result of the Character Detail request.
+    ///   - params: Parameters model for the  Character Detail request.
     func createModel(withEntity entity: RMCharacterDetailEntity, forParameters params: RMCharacterDetailUseCaseParameters) {
         guard let imagePath = inputModel?.image,
               let status = inputModel?.status,
@@ -92,6 +102,8 @@ extension DefaultRMCharacterDetailViewModel {
                                                   episodes: episodes)
     }
 
+    /// This method inflates an error model for data binding with the viewController
+    /// - Parameter error: Value of the error occurred
     func createErrorModel(_ error: RMError) {
         self.error.value = error
     }

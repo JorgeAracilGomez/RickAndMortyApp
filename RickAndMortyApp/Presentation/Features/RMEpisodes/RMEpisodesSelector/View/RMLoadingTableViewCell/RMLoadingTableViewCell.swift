@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import Lottie
 
-// MARK: RMLoadingCollectionViewCell
+// MARK: RMLoadingTableViewCell
 
 final class RMLoadingTableViewCell: UITableViewCell {
     

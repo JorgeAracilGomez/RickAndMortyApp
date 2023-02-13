@@ -72,7 +72,7 @@ extension RMCharacterDetailInfoView {
     }
 }
 
-// MARK: RMCharacterDetailLocationInnerView - Setup View
+// MARK: RMCharacterDetailInfoView - Setup View
 
 extension RMCharacterDetailInfoView {
     

@@ -7,6 +7,8 @@
 
 import UIKit
 
+// MARK: RMCharactersSelectorViewController
+
 final class RMCharactersSelectorViewController: RMBaseViewController {
     
     var coordinator: RMCharactersCoordinator?

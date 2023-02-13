@@ -7,6 +7,8 @@
 
 import UIKit
 
+// MARK: RMLoadingTableViewCell - Constants
+
 extension RMLoadingTableViewCell {
     enum LottieFiles {
         static let loading = "98770-assistagro-loading-bars"

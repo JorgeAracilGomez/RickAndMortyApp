@@ -42,6 +42,7 @@ final class RMCharactersCollectionViewDelegate: NSObject, UICollectionViewDelega
     }
 }
 
+// MARK: RMCharactersSelectorViewController - CollectionViewDelegateFlowLayout
 
 extension RMCharactersCollectionViewDelegate: UICollectionViewDelegateFlowLayout {
     

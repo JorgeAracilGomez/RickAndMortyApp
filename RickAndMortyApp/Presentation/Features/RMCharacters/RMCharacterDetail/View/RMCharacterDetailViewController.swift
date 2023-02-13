@@ -7,6 +7,8 @@
 
 import UIKit
 
+// MARK: RMCharacterDetailViewController
+
 final class RMCharacterDetailViewController: RMBaseViewController {
 
     var coordinator: RMCharactersCoordinator?

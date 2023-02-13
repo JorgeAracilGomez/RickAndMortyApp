@@ -11,8 +11,8 @@ import Foundation
 
 protocol RMLocationsUseCase {
     
-    /// Method that fetch the product transactions
-    /// - Parameter completion: Returns a products transactions list Entity or an error.
+    /// Method that fetch the locations
+    /// - Parameter completion: Returns a locations list Entity or an error.
     func execute(params: RMLocationsUseCaseParameters,
                  completion: @escaping (Result<RMLocationsListEntity, RMError>) -> Void)
 }

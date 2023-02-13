@@ -8,12 +8,19 @@
 import Foundation
 
 struct RMEpisodeEntity {
+    /// The id of the episode.
     var id: Int?
+    /// The name of the episode.
     var name: String?
+    /// The air date of the episode.
     var airDate: String?
+    /// The code of the episode.
     var episode: String?
+    /// List of characters who have been seen in the episode.
     var characters: [String]?
+    /// Link to the episode's own endpoint.
     var url: String?
+    /// Time at which the episode was created in the database.
     var created: String?
 
     init(decodable: RMEpisodeDecodable) {

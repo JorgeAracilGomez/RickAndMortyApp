@@ -16,6 +16,7 @@ struct RMCharactersListDecodable: Codable {
         case results
     }
     
+    /// Inicializer from decoder depending if we are filtering the request with a episodes list or not.
     init(from decoder: Decoder) throws {
         do {
             let values = try decoder.container(keyedBy: CodingKeys.self)

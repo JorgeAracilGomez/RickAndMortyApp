@@ -384,6 +384,7 @@
 		961999442993D62300F956D4 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				962C8B82299A125E004E7FFF /* Mannagers */,
 				961999472993D63D00F956D4 /* Extensions */,
 			);
 			path = Utils;
@@ -843,6 +844,14 @@
 			path = EpisodesHappyPath;
 			sourceTree = "<group>";
 		};
+		962C8B82299A125E004E7FFF /* Mannagers */ = {
+			isa = PBXGroup;
+			children = (
+				961999332992F9EB00F956D4 /* RMImageCacheMannager.swift */,
+			);
+			path = Mannagers;
+			sourceTree = "<group>";
+		};
 		96A2FA69298D250500676FA5 = {
 			isa = PBXGroup;
 			children = (
@@ -866,8 +875,6 @@
 		96A2FA74298D250500676FA5 /* RickAndMortyApp */ = {
 			isa = PBXGroup;
 			children = (
-				96199922298FD38A00F956D4 /* RMEndpoints.swift */,
-				961999332992F9EB00F956D4 /* RMImageCacheMannager.swift */,
 				96A2FABA298D730200676FA5 /* Base */,
 				96A2FABC298D74AA00676FA5 /* Data */,
 				96A2FABD298D74B000676FA5 /* Domain */,
@@ -973,6 +980,7 @@
 		96A2FABC298D74AA00676FA5 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				96199922298FD38A00F956D4 /* RMEndpoints.swift */,
 				96A2FABE298D74F000676FA5 /* Decodables */,
 				96A2FABF298D74F700676FA5 /* Repositories */,
 			);

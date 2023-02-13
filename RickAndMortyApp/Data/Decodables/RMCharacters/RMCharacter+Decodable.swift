@@ -13,7 +13,6 @@ struct RMCharacterDecodable: Codable {
     var status: String?
     var species: String?
     var type: String?
-    /// The gender of the character ('Female', 'Male', 'Genderless' or 'unknown').
     var gender: String?
     var origin: RMCharacterLocationDecodable?
     var location: RMCharacterLocationDecodable?

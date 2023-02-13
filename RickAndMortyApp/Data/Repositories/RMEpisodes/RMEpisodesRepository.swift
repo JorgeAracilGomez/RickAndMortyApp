@@ -11,9 +11,9 @@ import Foundation
 
 protocol RMEpisodesRepository {
     
-    /// Method that fetch the characters list
-    /// - Parameter params: Input parameters for fetch the characters list.
-    /// - Parameter completion: Returns a characters list Decodable or an error.
+    /// Method that fetch the episodes list
+    /// - Parameter params: Input parameters for fetch the episodes list.
+    /// - Parameter completion: Returns a episodes list Decodable or an error.
     func getEpisodes(params: RMEpisodesRepositoryParameters,
                      completion: @escaping (Result<RMEpisodesListDecodable, RMError>) -> Void)
 }

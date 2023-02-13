@@ -33,6 +33,14 @@ struct RMEndpoints {
 
 extension RMEndpoints {
     
+    /// this method generates a valid endpoint string with the necesary paramas formatted
+    /// - Parameters:
+    ///   - endpoint: The tyoe of the request acording to RMEndpoint.
+    ///   - searchFilter: String representation of the input query to filter characters.
+    ///   - charactersFilter: Array of Strings containing the characters IDs for we want to filter the characters request.
+    ///   - locationsFilter: Array of Strings containing the locations IDs for we want to filter the locations request.
+    ///   - episodesFilter: Array of Strings containing the episodes IDs for we want to filter the episodes request.
+    /// - Returns: Valid endpoint string with the necesary paramas formatted
     static func generateURLWithParams(for endpoint: RMEndpoint,
                                       searchFilter: String? = nil,
                                       charactersFilter: [String]? = nil,
@@ -63,16 +71,3 @@ extension RMEndpoints {
         return url
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
